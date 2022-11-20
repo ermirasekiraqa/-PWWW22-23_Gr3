@@ -1,0 +1,119 @@
+:root {
+    --padding: 30px 120px 30px 170px;
+    --font: Ubuntu; 
+    --background-grey: #eeeeee;
+    --light-grey: #7c7a7a;
+    --light-red: #dc7957;
+    --background-grey: #eeeeee;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu'), url(http://example.com/fonts/ubuntu.woff) format('woff');
+}
+
+body {
+    font-family: var(--font);
+}
+
+header {
+    /* border: solid 1px black; */
+    display: grid;
+    gap: 10px;
+}
+
+#header-actions ul {
+    padding: 0 50px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto 5px auto 5px auto auto;
+    place-content: end;
+    /* border: solid 1px black; */
+}
+
+#header-actions ul li {
+    place-self: center;
+    margin: 5px;
+    font-size: 10px;
+    color: var(--light-grey);
+}
+
+#header-actions ul li span:hover {
+    color: var(--light-red);
+}
+
+li {
+    list-style: none;
+}
+
+#header-menu {
+    display: grid;
+    grid-template-columns: 100px auto;
+    padding: 0 50px;
+}
+
+#header-menu ul {
+    padding-left: 3px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(6, auto);
+    align-content: center;
+    justify-content: end;
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+#header-menu ul li {
+    margin: 5px;
+} 
+
+#header-menu ul li:hover {
+    color: var(--light-red);
+}
+
+.entry {
+    padding: var(--padding);
+    display: flex;
+}
+
+#entry-text {
+    font-size: 13px;
+    padding-right: 0;
+}
+
+.entry img {
+    width: 65%;
+    padding-left: 0;
+}
+
+#entry-text h1 {
+    margin: 0;
+    padding: 60px 0 0 0;
+}
+
+#entry-text p span {
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    font-size: 85px;
+    color: black;
+}
+
+#entry-text p {
+    color: var(--light-grey);
+}
+
+button {
+    background-color: var(--light-red);
+    border: none;
+    height: 30px;
+    width: 100px;
+    font-size: 20px;
+    color: white;
+}
+
+button:hover {
+    color: var(--light-grey);
+}
