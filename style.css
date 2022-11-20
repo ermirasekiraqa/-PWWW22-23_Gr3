@@ -1,0 +1,41 @@
+header {
+    border: solid 1px black;
+    display: grid;
+    gap: 10px;
+}
+
+#header-actions ul{
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: auto 5px auto 5px auto auto;
+    place-content: end;
+    border: solid 1px black;
+    /* width: ; */
+}
+
+#header-actions ul li{
+    place-self: center;
+    margin: 5px;
+    font-size: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+#header-menu {
+    display: grid;
+    grid-template-columns: 100px auto;
+    padding: 0 50px;
+}
+
+#header-menu ul {
+    padding-left: 3px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(6, auto);
+    align-content: center;
+    justify-content: end;
+    margin-left: 30px;
+    font-size: 14px;
+}
