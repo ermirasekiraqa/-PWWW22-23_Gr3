@@ -136,6 +136,63 @@ header {
     transition-timing-function: ease-out;
 }
 
+/* About Us styling */
+.About-Us {
+    background-color:rgb(237,237,237);
+    width: 1000px;
+    height:530px;  
+   /*  margin:0px  100px;  */
+    /* margin-right: 50px; */
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.About-Us img {
+   
+    float: right;
+    margin-right: 130px;
+    margin-top: 80px;       
+}
+
+#About-Us-Text pre {
+    margin-left: 75px;
+    margin-top: 120px;
+    font-size: 14px;
+    font-family: Ubuntu, sans-serif;
+    color: #7c7a7a;
+    line-height: 18pt;
+    
+}
+
+#button-read-more {
+    position: relative;
+    left: 170px;
+    top: -10px; 
+    /* display: inline-block; */
+    padding: 0.5em 1em;
+    background-color:rgb(219,120,88);
+    color: white;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;  
+}
+
+#button-read-more:hover {
+    color: rgb(248, 230, 205);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+#About-Us-Text h1 {
+   /*  margin-left: 160px; */
+   position: relative;
+   left: 170px;
+   top: 120px; 
+   font-size: 40px;
+}
+
 /* Latest article styling */
 .latest-article {
     padding: var(--padding);
