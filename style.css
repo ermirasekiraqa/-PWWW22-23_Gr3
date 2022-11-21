@@ -1,5 +1,6 @@
 :root {
-    --padding: 30px 120px 30px 170px;
+    /* CSS variables */
+    --padding: 40px 120px 40px 170px;
     --font: Ubuntu; 
     --background-grey: #eeeeee;
     --light-grey: #7c7a7a;
@@ -15,9 +16,10 @@
 }
 
 body {
-    font-family: var(--font);
+    font-family: Ubuntu, sans-serif;
 }
 
+/* Header styling */
 header {
     /* border: solid 1px black; */
     display: grid;
@@ -38,14 +40,21 @@ header {
     margin: 5px;
     font-size: 10px;
     color: var(--light-grey);
+    list-style: none;
 }
 
 #header-actions ul li span:hover {
     color: var(--light-red);
+    cursor: pointer;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
 }
 
-li {
-    list-style: none;
+#header-actions ul li i:hover {
+    color: var(--light-red);
+    cursor: pointer;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
 }
 
 #header-menu {
@@ -67,15 +76,21 @@ li {
 
 #header-menu ul li {
     margin: 5px;
+    list-style: none;
+    cursor: pointer;
 } 
 
 #header-menu ul li:hover {
     color: var(--light-red);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
 }
 
+/* Entry styling */
 .entry {
     padding: var(--padding);
     display: flex;
+    margin: 0 16px 40px 16px;
 }
 
 #entry-text {
@@ -105,15 +120,73 @@ li {
     color: var(--light-grey);
 }
 
-button {
+#entry-button {
     background-color: var(--light-red);
     border: none;
     height: 30px;
     width: 100px;
-    font-size: 20px;
+    font-size: 14px;
     color: white;
+    cursor: pointer;
 }
 
-button:hover {
+#entry-button:hover {
     color: var(--light-grey);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+/* Latest article styling */
+.latest-article {
+    padding: var(--padding);
+    background-color: var(--background-grey);
+}
+
+.latest-article h1 {
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+#articles {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+#articles article {
+    width: calc(100% / 3);
+}
+
+.latest-article article img {
+    width: 100%;
+} 
+
+#article-text {
+    padding: 0 16px;
+    color: var(--light-grey);
+    font-size: 14px;
+    text-align: justify;
+}
+
+#article-header {
+    padding: 0 16px;
+    font-size: 18px;
+    color: black;
+}
+
+#articles button {
+    margin: 0 16px 40px 16px;
+    border: none;
+    background-attachment: none;
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--light-red);
+    font-size: 14px;
+}
+
+#articles button:hover {
+    color: var(--light-grey);
+    font-size: 16px;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
 }
