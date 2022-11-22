@@ -1,11 +1,15 @@
 :root {
     /* CSS variables */
-    --padding: 40px 120px 40px 170px;
+    --padding: 60px 200px 60px 200px;
     --font: Ubuntu; 
     --background-grey: #eeeeee;
     --light-grey: #7c7a7a;
     --light-red: #dc7957;
     --background-grey: #eeeeee;
+    --button-width: 130px;
+    --button-height: 40px;
+    --gap-between-text-lines: 18pt;
+    --font-size: 14px;
 }
 
 @font-face {
@@ -17,6 +21,7 @@
 
 body {
     font-family: Ubuntu, sans-serif;
+    overflow-x: hidden;
 }
 
 /* Header styling */
@@ -57,6 +62,10 @@ header {
     transition-timing-function: ease-out;
 }
 
+#home {
+    color: var(--light-red);
+}
+
 #header-menu {
     display: grid;
     grid-template-columns: 100px auto;
@@ -71,7 +80,7 @@ header {
     align-content: center;
     justify-content: end;
     margin-left: 30px;
-    font-size: 14px;
+    font-size: var(--font-size);
 }
 
 #header-menu ul li {
@@ -90,67 +99,64 @@ header {
 .entry {
     padding: var(--padding);
     display: flex;
-    margin: 0 16px 40px 16px;
 }
 
 #entry-text {
-    font-size: 13px;
+    font-size: var(--font-size);
     padding-right: 0;
 }
 
 .entry img {
     width: 65%;
-    padding-left: 0;
+    margin-left: auto;
 }
 
 #entry-text h1 {
-    margin: 0;
-    padding: 60px 0 0 0;
+    line-height: 40pt;
 }
 
 #entry-text p span {
-    margin: 0px;
-    padding: 0px;
     font-weight: bold;
-    font-size: 85px;
+    font-size: 90px;
     color: black;
 }
 
 #entry-text p {
     color: var(--light-grey);
+    line-height: var(--gap-between-text-lines);
 }
 
 #entry-button {
+    margin-top: 16px;
     background-color: var(--light-red);
     border: none;
-    height: 30px;
-    width: 100px;
-    font-size: 14px;
+    height: var(--button-height);
+    width: var(--button-width);
+    font-size: var(--font-size);
     color: white;
     cursor: pointer;
 }
 
 #entry-button:hover {
-    color: var(--light-grey);
+    color: var(--background-grey);
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
 }
 
 /* About Us styling */
 .About-Us {
-    background-color:rgb(237,237,237);
+    background-color:var(--background-grey);
     width: 1000px;
     height:530px;  
    /*  margin:0px  100px;  */
     /* margin-right: 50px; */
     
-    display: block;
+    display: block; /* qikjo ndoshta inline-block */
     margin-left: auto;
     margin-right: auto;
 }
 
 .About-Us img {
-   
     float: right;
     margin-right: 130px;
     margin-top: 80px;       
@@ -162,8 +168,7 @@ header {
     font-size: 14px;
     font-family: Ubuntu, sans-serif;
     color: #7c7a7a;
-    line-height: 18pt;
-    
+    line-height: 18pt; 
 }
 
 #button-read-more {
@@ -201,7 +206,7 @@ header {
 
 .latest-article h1 {
     font-size: 40px;
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 
 #articles {
@@ -221,14 +226,15 @@ header {
 #article-text {
     padding: 0 16px;
     color: var(--light-grey);
-    font-size: 14px;
-    text-align: justify;
+    font-size: var(--font-size);
+    line-height: var(--gap-between-text-lines);
 }
 
 #article-header {
     padding: 0 16px;
     font-size: 18px;
     color: black;
+    line-height: var(--gap-between-text-lines);
 }
 
 #articles button {
@@ -238,7 +244,7 @@ header {
     cursor: pointer;
     text-decoration: underline;
     color: var(--light-red);
-    font-size: 14px;
+    font-size: var(--font-size);
 }
 
 #articles button:hover {
@@ -246,4 +252,60 @@ header {
     font-size: 16px;
     transition-duration: 0.1s;
     transition-timing-function: ease-out;
+}
+
+/* Footer styling */
+footer {
+    padding: var(--padding);
+    background-color: white;
+    display: block;
+    padding-bottom: 0;
+}
+
+.related-info {
+    display: flex;
+}
+
+.related-info div {
+    width: calc((100% / 5));
+}
+
+.related-info div p {
+    list-style: none;
+    margin-top: 14px;
+    font-size: 10px;
+    color: var(--light-grey);
+}
+
+.related-info div p span {
+    margin-bottom: 20px;
+    color: black;
+    font-size: var(--font-size);
+    font-weight: bold;
+}
+
+.copyright-social-media {
+    display: flex;
+    margin-top: 60px;
+}
+
+.copyright-social-media p {
+    font-size: 12px;
+    color: var(--light-grey);
+}
+
+#social-media-icons {
+    margin-left: auto;
+}
+
+#social-media-icons i {
+    color: var(--light-grey);
+    font-size: 12px;
+}
+
+#social-media-icons i:hover {
+    color: var(--light-red);
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+    cursor: pointer;
 }
