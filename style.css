@@ -6,6 +6,7 @@
   --light-grey: #7c7a7a;
   --light-red: #dc7957;
   --background-grey: #eeeeee;
+  --about-section-background: #ededed;
 }
 
 img {
@@ -142,57 +143,61 @@ header {
 
 /* About Us styling */
 .About-Us {
-  background-color: rgb(237, 237, 237);
-  width: 1000px;
-  height: 530px;
-  /*  margin:0px  100px;  */
-  /* margin-right: 50px; */
-
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: grid;
+  grid-template-columns: 500px 400px;
+  gap: 50px;
+  place-content: center;
+  padding: 120px 20px;
+  background-color: var(--about-section-background);
 }
 
 .About-Us img {
-  float: right;
-  margin-right: 130px;
-  margin-top: 80px;
+  width: 100%;
+  height: 500px;
+  margin: 0 20px;
 }
 
-#About-Us-Text pre {
-  margin-left: 75px;
-  margin-top: 120px;
+#About-Us-Text {
+  place-self: center;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 5px;
+  align-items: start;
+}
+
+#About-Us-Text p {
+  line-height: 2;
+  display: grid;
+  gap: 20px;
   font-size: 14px;
-  font-family: Ubuntu, sans-serif;
-  color: #7c7a7a;
-  line-height: 18pt;
+}
+#About-Us-Text p span {
+  font-weight: normal;
+}
+#About-Us-Text h1 {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+#About-Us-Text span {
+  font-weight: 900;
 }
 
 #button-read-more {
-  position: relative;
-  left: 170px;
-  top: -10px;
-  /* display: inline-block; */
-  padding: 0.5em 1em;
+  padding: 1em 1.5em;
   background-color: rgb(219, 120, 88);
   color: white;
   border: none;
   border-radius: 1px;
   cursor: pointer;
+  width: 150px;
+  margin-top: 20px;
 }
 
 #button-read-more:hover {
   color: rgb(248, 230, 205);
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
-}
-
-#About-Us-Text h1 {
-  /*  margin-left: 160px; */
-  position: relative;
-  left: 170px;
-  top: 120px;
-  font-size: 40px;
 }
 
 /* Latest article styling */
@@ -256,6 +261,11 @@ header {
   display: grid;
   gap: 20px;
   place-content: center;
+  margin: 40px 0;
+}
+
+.explore img {
+  width: 100%;
 }
 
 .explore-intro h1 {
