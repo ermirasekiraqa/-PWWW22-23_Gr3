@@ -153,10 +153,12 @@ header {
   font-weight: 600;
 }
 
-.About-Us img {
-    width: 35%;      
-    margin-left: auto;
+.About-Subscribe-img {
+  margin-left: auto;
 }
+.About-Subscribe-img img {
+  width: 300px;
+} 
 
 .About-Us p {
   max-width: 55ch;
@@ -164,7 +166,7 @@ header {
 
 /* Explore section styling */
 .explore {
-    padding: 20px 30px;
+    padding: var(--padding);
     display: grid;
     gap: 20px;
     place-content: center;
@@ -357,6 +359,28 @@ header {
     font-weight: 500;
     color: black;
     margin-bottom: 16px;
+}
+
+/* Subscribe us styling */
+.Subscribe-Us {
+  display: flex;
+  padding: var(--padding);
+}
+
+#Subscribe-Us-Text p {
+  max-width: 55ch;
+}
+
+#user-input-email {
+  margin-right: -4px;
+  height: 38px;
+  width: 65%;
+  border: none;
+  background-color: var(--background-grey);
+}
+
+#subscribe-us-title {
+  font-size: 16px;
 }
 
 /* Service info styling */
