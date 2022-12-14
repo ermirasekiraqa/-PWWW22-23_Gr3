@@ -164,7 +164,7 @@ header {
 
 .About-Subscribe-img img {
   width: 300px;
-}
+} 
 
 .About-Us p {
   max-width: 55ch;
@@ -330,6 +330,28 @@ header {
 
 .latest-article img {
   width: 100%;
+}
+
+/* Subscribe us styling */
+.Subscribe-Us {
+  display: flex;
+  padding: var(--padding);
+}
+
+#Subscribe-Us-Text p {
+  max-width: 55ch;
+}
+
+#user-input-email {
+  margin-right: -4px;
+  height: 38px;
+  width: 65%;
+  border: none;
+  background-color: var(--background-grey);
+}
+
+#subscribe-us-title {
+  font-size: 16px;
 }
 
 /* Subscribe us styling */
