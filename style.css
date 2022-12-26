@@ -1,15 +1,15 @@
 :root {
-    /* CSS variables */
-    --padding: 60px 200px 60px 200px;
-    --background-grey: #eeeeee;
-    --light-grey: #7c7a7a;
-    --light-red: #dc7957;
-    --font-size: 14px;
+  /* CSS variables */
+  --padding: 60px 200px 60px 200px;
+  --background-grey: #eeeeee;
+  --light-grey: #7c7a7a;
+  --light-red: #dc7957;
+  --font-size: 14px;
 }
 
 body {
-    font-family: 'Ubuntu', sans-serif;
-    overflow-x: hidden;
+  font-family: "Ubuntu", sans-serif;
+  overflow-x: hidden;
 }
 
 /* Header styling */
@@ -79,7 +79,6 @@ header {
   transition-timing-function: ease-out;
 }
 
-
 #home {
   color: var(--light-red);
 }
@@ -102,56 +101,56 @@ header {
 }
 
 #modern-technology {
-    font-weight: 300;
-    font-size: 30px;
-    color: black;
-    margin-bottom: 0;
+  font-weight: 300;
+  font-size: 30px;
+  color: black;
+  margin-bottom: 0;
 }
 
 #drone {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 300;
-    font-size: 96px;
-    color: black;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 96px;
+  color: black;
 }
 
 .text {
-    margin-top: 0;
-    color: var(--light-grey);
-    line-height: 18pt;
-    font-size: var(--font-size);
+  margin-top: 0;
+  color: var(--light-grey);
+  line-height: 18pt;
+  font-size: var(--font-size);
 }
 
 .entry-and-about-us-button {
-    margin-top: 16px;
-    background-color: var(--light-red);
-    border: none;
-    height: 40px;
-    width: 130px;
-    font-size: var(--font-size);
-    color: white;
-    cursor: pointer;
+  margin-top: 16px;
+  background-color: var(--light-red);
+  border: none;
+  height: 40px;
+  width: 130px;
+  font-size: var(--font-size);
+  color: white;
+  cursor: pointer;
 }
 
 .entry-and-about-us-button:hover {
-    color: var(--background-grey);
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out;
+  color: var(--background-grey);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
 }
 
 /* About Us styling */
 .About-Us {
-    background-color: var(--background-grey);
-    display: flex;
-    padding: var(--padding);
-    padding-bottom: 100px;
+  background-color: var(--background-grey);
+  display: flex;
+  padding: var(--padding);
+  padding-bottom: 100px;
 }
 
 .section-header {
-    font-weight: 300;
-    font-size: 42px;
-    margin-bottom: 16px;
+  font-weight: 300;
+  font-size: 42px;
+  margin-bottom: 16px;
 }
 
 .section-header span {
@@ -164,7 +163,7 @@ header {
 
 .About-Subscribe-img img {
   width: 300px;
-} 
+}
 
 .About-Us p {
   max-width: 55ch;
@@ -177,15 +176,15 @@ header {
   gap: 20px;
   place-content: center;
 }
-  
+
 .explore img {
   width: 100%;
 }
-  
+
 .explore-intro p {
   max-width: 80ch;
 }
-  
+
 .explore-latest-article-cards {
   display: grid;
   grid-template-columns: repeat(3, 300px);
@@ -197,7 +196,7 @@ header {
   grid-template-rows: 260px 180px;
   gap: 10px;
 }
-  
+
 .explore-latest-article-card-text {
   display: grid;
   grid-template-rows: auto 100px auto;
@@ -207,7 +206,7 @@ header {
 .explore-latest-article-card-text p {
   padding: 0 12px;
 }
-  
+
 .card-header {
   font-size: 18px;
   font-weight: 500;
@@ -380,8 +379,7 @@ header {
 .service-info {
   padding: var(--padding);
   display: flex;
-  background-color: 
-  var(--background-grey);
+  background-color: var(--background-grey);
   /* width: 100%; */
 }
 
@@ -418,7 +416,7 @@ header {
 /* Footer styling */
 footer {
   padding: var(--padding);
-  background-color: white;
+  background-color: red;
   display: block;
   padding-bottom: 0;
 }
