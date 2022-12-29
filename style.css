@@ -60,17 +60,22 @@ header {
   padding-left: 3px;
   display: grid;
   gap: 24px;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(7, auto);
   align-content: center;
   justify-content: end;
   margin-left: 30px;
-  font-size: 14px;
+  font-size: var(--font-size);
 }
 
 #header-menu ul li {
   margin: 5px;
   list-style: none;
   cursor: pointer;
+}
+
+#header-menu ul li a {
+  text-decoration: none;
+  color: black;
 }
 
 #header-menu ul li:hover {
@@ -80,7 +85,7 @@ header {
 }
 
 
-#home {
+#active {
   color: var(--light-red);
 }
 
@@ -380,9 +385,8 @@ header {
 .service-info {
   padding: var(--padding);
   display: flex;
-  background-color: 
-  var(--background-grey);
-  /* width: 100%; */
+  justify-content: space-between;
+  background-color: var(--background-grey);
 }
 
 .service-info-divs {
@@ -425,11 +429,13 @@ footer {
 
 .related-info {
   display: flex;
+  justify-content: space-between;
+  text-align: left;
 }
 
-.related-info div {
+/* .related-info div {
   width: calc((100% / 5));
-}
+} */
 
 .related-info div p {
   list-style: none;
