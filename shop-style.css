@@ -200,6 +200,83 @@ header {
     font-weight: 600;
 } 
 
+/* Single product styling */
+.single-product {
+    padding: var(--padding);
+    display: flex;
+    gap: 50px;
+}
+
+#prod-image {
+    text-align: center;
+    border: 2px solid var(--light-grey);
+    border-radius: 25px;
+}
+
+#prod-image {
+    width: 50%;
+    min-width: 150px;
+    max-width: 400px;
+    padding: 10px;
+}
+
+#prod-image img {
+    width: 100%;
+    background-color: var(--background-grey);
+    border-radius: 20px;
+}
+
+.prod-description {
+    margin: 0;
+}
+
+#prod-price {
+    color: var(--light-red);
+    margin: 0;
+}
+
+#prod-name {
+    margin-bottom: 8px;
+}
+
+.entry-and-about-us-button {
+    margin-top: 16px;
+    background-color: var(--light-red);
+    border: none;
+    height: 40px;
+    width: 130px;
+    font-size: var(--font-size);
+    color: white;
+    cursor: pointer;
+}
+
+.entry-and-about-us-button:hover {
+    color: var(--background-grey);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+#quantity-add-button input {
+    height: 32px;
+    width: 40px;
+}
+
+.prod-specifics {
+    margin-top: 32px;
+}
+
+.prod-specifics table tr th {
+    text-align: left;
+}
+
+.prod-specifics table tr td {
+    padding: 8px 12px 8px 0;
+}
+
+.prod-specifics table tr:nth-child(even) {
+    background-color: var(--background-grey);
+}
+
 /* Footer styling */
 footer {
     padding: var(--padding);
