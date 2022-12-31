@@ -9,6 +9,7 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
+  position: relative;
 }
 img {
   width: 100%;
@@ -155,6 +156,7 @@ main {
 .product-info {
   padding: 5px 8px;
   display: grid;
+  grid-template-rows: 250px auto auto auto;
 }
 
 .product-info-view-btn {
@@ -182,6 +184,7 @@ main {
 
 #product-price {
   color: var(--light-red);
+  font-weight: 800;
 }
 
 /* Categories styling */
@@ -338,4 +341,48 @@ footer {
   transition-duration: 0.1s;
   transition-timing-function: ease-out;
   cursor: pointer;
+}
+
+/* modal styling */
+.modal-container {
+  border: solid 1px black;
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+#subscribe-modal {
+  border-radius: 5px;
+  background-color: white;
+  display: grid;
+  padding: 30px;
+  place-content: center;
+  position: relative;
+}
+#subscribe-modal h1 {
+  color: #dc7957;
+}
+
+#subscribe-modal p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  border: none;
+  background-color: unset;
+  font-size: 20px;
+  color: #dc7957;
+  padding: 10px;
+  font-weight: 900;
 }
