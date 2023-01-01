@@ -90,7 +90,7 @@ header {
 
 /* Entry styling */
 .entry {
-    background-image: url("shop_images/entry-background.png");
+    background-image: url("about_us_images/about-us-bg.jpeg");
     width: 100%;
     height: 40vh;
     background-size: cover;
@@ -163,131 +163,71 @@ footer {
     transition-timing-function: ease-out;
     cursor: pointer;
   }
-  
-  /* Contact styling */
-  #contact-details{
+
+  /* About us style */
+  #about-head{
     padding: var(--padding);
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
-  #contact-details .details{
-    width: 40%;
-  }
-
-  #contact-details .details span,
-  #form-details form span
-  {
-    padding-bottom:0px ;
-    font-size: var(--font-size);
+  #about-head img{
+    width: 50%;
+    height: auto;
   }
 
-  #contact-details .details h2,
-  #form-details form h2{
-    font-size: 26px;
-    line-height: 35px;
-    padding: 20px 0;
-  }
+  #about-head div{
+    padding-left: 40px;
+ }
 
-  #contact-details .details h3{
-    font-size: 16px;
-    padding-bottom:10px;
-  }
-
-  #contact-details .details li{
-    list-style: none;
-    display: flex;
-    padding: 10px 0;
-  }
-
-  #contact-details .details li i{
-    font-size: 14px;
-    padding-right: 22px;
-  }
-
-  #contact-details .details li p{
-    margin: 0;
-    font-size: 14px;
-  }
-
-  #contact-details .map iframe{
-    height: 400px; 
-    width: 400px;
-
-  }
-
-  #form-details{
-    display: flex;
-    justify-content: space-between;
-    padding: var(--padding);
-    background-color: var(--background-grey);
-  }
-  
-  #form-details form{
-    width: 150%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  #form-details form input,
-  #form-details form textarea{
-    width: 100%;
-    padding: 12px 15px;
-    outline: none;
-    margin-bottom: 20px;
-    border: 1px solid #e1e1e1;
-  }
-
-  #form-details button{
-    margin-top: 0;
-    background-color: var(--light-red);
-    border: none;
-    height: 40px;
-    width: 130px;
-    font-size: var(--font-size);
-    color: white;
-    cursor: pointer;
-}
-
-#form-details button{
-    color: var(--background-grey);
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out;
-}
-
-#form-details .people div{
-  padding-bottom: 25px;
-  display: flex;
-  align-items: flex-start;
-}
-
-#form-details .people img{
-  width: 45%;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 15px;
-}
-
-#form-details .people div p{
-  white-space: nowrap;
-  margin: 0;
+.text {
+  margin-top: 0;
+  color: var(--light-grey);
+  line-height: 18pt;
   font-size: var(--font-size);
-  line-height: 25px;
+  text-align: justify;
 }
 
-#form-details .people div p span{
-  display: block;
-  font-size: 16px;
-  font-weight: 600;
+.section-header {
+  font-weight: 300;
+  font-size: 42px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+ #app-link {
+  text-decoration: none;
   color: var(--light-red);
+ }
+
+ #app-link:hover {
+  text-decoration: underline;
+  color: var(--light-grey);
+  font-size: 46px;
+ }
+
+#our-clients-video{
+    padding: var(--padding);
+    display: block;
 }
 
-#form-details .people div{
-  padding-left: 150px;
+#video-text {
+  text-align: center;
+  font-size: 20px;
 }
 
+#our-clients-video #videos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
+#our-clients-video video::-webkit-media-controls {
+    display:none !important;
+}
 
+#our-clients-video #videos .box{
+    filter: grayscale(1);
+}
 
-
+#our-clients-video #videos .box:hover{
+    filter: grayscale(0);
+}
