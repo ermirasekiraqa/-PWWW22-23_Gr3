@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    >
+    <link 
+        rel="stylesheet" 
+        type="text/css" 
+        href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"
+    >
+    <link rel="stylesheet" href="about-us-style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <title>Modern Drone Technology</title>
+</head>
+<body>
+    <header>
+        <div id="header-actions">
+          <ul>
+            <li><span>View store</span></li>
+            <li>|</li>
+            <li><span>Login</span></li>
+            <li>|</li>
+            <li><span>Register</span></li>
+            <li><i class="fa fa-search"></i></li>
+          </ul>
+        </div>
+        <nav id="header-menu">
+          <h1><b>Drone</b></h1>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li>Professional</li>
+            <li>Enterprise</li>
+            <li>Explore</li>
+            <li>Contact</li>
+            <li><i class="fa fa-shopping-cart"></i></li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="entry">
+            <h2>#KnowUs</h2>
+            <p>READ MORE ABOUT US!</p>
+        </section>
+
+            <section id="about-head" class="section-p1">
+                <img src="about_us_images\about-us-2.jpg" alt="">
+                <div>
+                    <p class="section-header">Who We Are?</p>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sint corporis molestias optio magni, 
+                        hic assumenda commodi quod consequuntur accusantium placeat eos laboriosam qui sequi ex provident asperiores quisquam?
+                         Et reprehenderit unde nisi odio, magnam atque quas nam porro provident, delectus
+                         blanditiis ducimus modi a eius. Numquam accusantium animi eaque iusto, fuga quibusdam. Iste, dolore!
+                    </p>
+                    <div id="marquee"><marquee direction="left" scrollamounts="5" loop="-1" width="100%">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis laudantium quam odio,
+                                        facilis ipsam libero!
+                                    </marquee>
+                    </div>
+                </div>
+            </section>
+            <section id="our-clients-video">
+                <div>
+                    <p class="section-header">You Make Us Work Harder</p>
+                    <p id="video-text" class="text">Some of the best videos recorded with drones by our customers who were satisfied with our services </p>
+                </div>
+                <div id="videos">
+                    <div class="box">
+                         <video width="300" height="240" controls class="clip">
+                         <source src="about_us_images\190312_17_Colosseum_Drone_009.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                 <div class="box">
+                    <video width="300" height="240" controls class="clip">
+                    <source src="about_us_images\630_630-0156_preview.mp4" type="video/mp4">
+                    </video>
+                </div>
+                 <div class="box">
+                    <video width="300" height="240" controls class="clip">
+                    <source src="about_us_images\190416_08_Whales_Drone_004.mp4" type="video/mp4">
+                    </video>
+                </div>
+                 <div class="box">
+                    <video width="300" height="240" controls class="clip">
+                    <source src="about_us_images\210608_01_Drone Broadway_4k_011.mp4" type="video/mp4">
+                    </video>
+                </div>
+                 <div class="box">
+                    <video width="300" height="240" controls class="clip">
+                    <source src="about_us_images\181015_13_Venice Beach Drone_25.mp4" type="video/mp4">
+                 </video>
+                </div>
+
+                <div class="box">
+                    <video width="300" height="240" controls class="clip">
+                    <source src="about_us_images\210602_01_Drone Hanborough_4k_005.mp4" type="video/mp4">
+                    </video>
+                </div>
+                 <div class="box">
+                    <video width="300" height="240" controls class="clip">
+                    <source src="about_us_images\190416_12_MidlandsFarm_Drone_04.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="box">
+                    <video width="300" height="240" controls class="clip">
+                    <source src="about_us_images\190201_02_Brighton_12.mp4" type="video/mp4">
+                    </video>
+                </div>
+                 <div class="box">
+                    <video width="300" height="240" controls class="clip">
+                    <source src="about_us_images\190111_08_BuildingsTraffic_Drone_09.mp4" type="video/mp4">
+                    </video>
+                 </div>
+                </div>
+                <script>
+                    const clip = document.querySelectorAll('.clip');
+                    for(let i = 0; i<clip.length; i++){
+                    clip[i].addEventListener('mouseenter', function(e)
+                    {
+                        clip[i].play()
+                    })
+            
+                    clip[i].addEventListener('mouseout', function(e)
+                    {
+                        clip[i].pause()
+                    })
+                }
+                </script>
+            </section>
+            <section id="App">
+                <p class="section-header">Download Our <a id="app-link" href="https://play.google.com/store/apps/details?id=com.droneflight_shoppingonline.drone">App</a></p>
+
+                <video width="800" height="440"  autoplay muted loop>
+                    <source src="about_us_images\Screen_Recording_20230101_163130_Google Play Store.mp4" type="video/mp4">
+                </video>
+
+            </section>
+            
+    </main>
+    <footer>
+        <section class="related-info">
+            <div id="product-categories">
+                <p><span>Product Categories</span></p>
+                <p>Consumer</p>
+                <p>Professional</p>
+                <p>Enterprise</p>
+                <p>Components</p>
+            </div>
+            <div id="where-to-buy">
+                <p><span>Where to Buy</span></p>
+                <p>Consumer</p>
+                <p>Professional</p>
+                <p>Enterprise</p>
+                <p>Components</p>
+            </div>
+            <div id="quick-links">
+                <p><span>Quick Links</span></p>
+                <p>Who we are</p>
+                <p>Contact Us</p>
+                <p>Careers</p>
+                <p>Dealer portal</p>
+            </div>
+            <div id="service-plan">
+                <p><span>Service Plan</span></p>
+                <p>Consumer</p>
+                <p>Professional</p>
+                <p>Enterprise</p>
+                <p>Components</p>
+            </div>
+            <div id="cooperation">
+                <p><span>Cooperation</span></p>
+                <p>Consumer</p>
+                <p>Professional</p>
+                <p>Enterprise</p>
+                <p>Components</p>
+            </div>
+        </section>
+
+        <section class="copyright-social-media">
+            <p>
+                Copyright © 2022 Templates Jungle Rights Reserved. Feedback on web
+                experience
+            </p>
+            <div id="social-media-icons">
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-google-plus"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

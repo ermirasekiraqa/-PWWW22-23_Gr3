@@ -210,16 +210,17 @@ header {
 /* #prod-image { */
 #images {
     text-align: center;
-    border: 2px solid var(--light-grey);
-    border-radius: 25px;
     width: 50%;
     min-width: 150px;
     max-width: 400px;
-    padding: 10px;
 }
 
 #main-img {
     margin-bottom: 10px;
+    border: 2px solid var(--light-grey);
+    border-radius: 25px;
+    padding: 7px;
+
 }
 
 #main-img:hover {
@@ -237,9 +238,15 @@ header {
     gap: 10px;
 }
 
-#small-img {
+.small {
     background-color: var(--background-grey);
     border-radius: 20px;
+}
+
+#small-img {
+    padding: 5px;
+    border: 2px solid var(--light-grey);
+    border-radius: 25px;
 }
 
 #small-img:hover {
