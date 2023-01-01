@@ -19,6 +19,11 @@ header {
   gap: 10px;
 }
 
+header a {
+  color: unset;
+  text-decoration: none;
+}
+
 #header-actions ul {
   padding: 0 50px;
   display: grid;
