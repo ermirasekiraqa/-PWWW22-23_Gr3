@@ -32,6 +32,7 @@ const droneData = [
     bestSeller: true,
     img: "images/drone-3.PNG",
   },
+
   {
     name: "Excellent 4-Axis 10L Pesticide Sprayer Uav T410 Agricultural Drone for Farming",
     price: 2500,
@@ -58,6 +59,9 @@ function createCategoryContainer(text) {
   const categoryName = document.createElement("p");
   categoryName.textContent = text;
   productCategory.append(categoryName);
+  productCategory.addEventListener("click", () => {
+    location.href = "categories-page.html" + "?category=" + text;
+  });
   return productCategory;
 }
 
