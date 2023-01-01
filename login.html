@@ -18,8 +18,20 @@
     <main>
       <form action="" id="login-form">
         <h1>Welcome back!</h1>
-        <input type="email" name="" id="email" placeholder="Email" />
-        <input type="password" id="password" placeholder="Password" />
+        <input
+          type="email"
+          name=""
+          id="email"
+          placeholder="Email"
+          required="true"
+        />
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          required="true"
+          minlength="5"
+        />
         <button type="submit">Log In</button>
       </form>
       <a href="#">Don't have an account? Click here to sign up!</a>
