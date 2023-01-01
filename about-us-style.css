@@ -208,6 +208,7 @@ footer {
 #our-clients-video{
     padding: var(--padding);
     display: block;
+    background-color: var(--background-grey);
 }
 
 #video-text {
@@ -215,20 +216,3 @@ footer {
   font-size: 20px;
 }
 
-#our-clients-video #videos{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-#our-clients-video video::-webkit-media-controls {
-    display:none !important;
-}
-
-#our-clients-video #videos .box{
-    filter: grayscale(1);
-}
-
-#our-clients-video #videos .box:hover{
-    filter: grayscale(0);
-}
