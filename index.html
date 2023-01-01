@@ -19,27 +19,28 @@
 </head>
 <body>
     <header>
-        <div id="header-actions">
-            <ul>
-                <li><span>View store</span></li>
-                <li> | </li>
-                <li><span>Login</span></li>
-                <li> | </li>
-                <li><span>Register</span></li>
-                <li><i class="fa fa-search"></i></li>
-            </ul>
-        </div>
-        <nav id="header-menu">
-            <h1><b>Drone</b></h1>
-            <ul>
-                <li id="home">Home</li>
-                <li>Consumer</li>
-                <li>Professional</li>
-                <li>Enterprise</li>
-                <li>Explore</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+      <div id="header-actions">
+        <ul>
+          <li><span>View store</span></li>
+          <li>|</li>
+          <li><span>Login</span></li>
+          <li>|</li>
+          <li><span>Register</span></li>
+          <li><i class="fa fa-search"></i></li>
+        </ul>
+      </div>
+      <nav id="header-menu">
+        <h1><b>Drone</b></h1>
+        <ul>
+          <li id="active">Home</li>
+          <li><a href="shop.html">Shop</a></li>
+          <li>Professional</li>
+          <li>Enterprise</li>
+          <li>Explore</li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><i class="fa fa-shopping-cart"></i></li>
+        </ul>
+      </nav>
     </header>
     <main>
         <section class="entry">
@@ -53,20 +54,24 @@
         </section>
 
         <section class="About-Us">
-            <img src="images\drone2.jpeg" alt="" width="240">
-            <div id="About-Us-Text">
-                <h1>About <strong>Us</strong></h1>  
-                <pre>
+            <div id="About-Us-Text-And-Button">
+                <p class="section-header">About <span>Us</span></p>  
+                <p class="text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Autem et libero pariatur quisquam natus! Nihil harum
-    
-                    atque quos expedita quibusdam! Tempore praesentium
+                    Autem et libero pariatur quisquam natus! Nihil harum.
+                </p>
+                <br>
+                <p class="text">
+                    Atque quos expedita quibusdam! Tempore praesentium
                     voluptates accusamus minima omnis ratione incidunt 
                     sequi, deserunt blanditiis laboriosam alias. Sapiente 
                     dolorum eaque quaerat, voluptatum sed.
-                </pre>
+                </p>
+                <button class="entry-and-about-us-button">Read More</button>
             </div>       
-            <div id="About-Us-Button"><button id="button-read-more">Read More</button></div>                         
+            <div class="About-Subscribe-img">
+                <img src="images\drone2.png" alt="">
+            </div>                      
         </section> 
 
         <section class="explore">
@@ -78,11 +83,11 @@
                     corporis eum maxime.
                 </p>
             </div>
-            <div class="explore-cards">
-                <div class="explore-card">
-                    <img src="images\drone3.PNG" alt="" />
-                    <div class="explore-card-text">
-                        <p class="explore-card-header">Video Production<p>
+            <div class="explore-latest-article-cards">
+                <div class="explore-latest-article-card">
+                    <img src="images\drone3.png" alt="" />
+                    <div class="explore-latest-article-card-text">
+                        <p class="card-header">Video Production<p>
                             <p class="text">
                                 Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
                                 Morbi accumsan ipsum urna eu felis dapibus condimentum sit amet a augue.
@@ -91,10 +96,10 @@
                     </div>
                 </div>
     
-                <div class="explore-card">
-                    <img src="images\drone4.PNG" alt="" />
-                    <div class="explore-card-text">
-                        <p class="explore-card-header">Enterprise</p>
+                <div class="explore-latest-article-card">
+                    <img src="images\drone4.png" alt="" />
+                    <div class="explore-latest-article-card-text">
+                        <p class="card-header">Enterprise</p>
                         <p class="text">
                             Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
                             Morbi accumsan ipsum urna eu felis dapibus condimentum sit amet a augue.
@@ -103,10 +108,10 @@
                     </div>
                 </div>
     
-                <div class="explore-card">
-                    <img src="images\drone5.PNG" alt="" />
-                    <div class="explore-card-text">
-                        <p class="explore-card-header">Agriculture</p>
+                <div class="explore-latest-article-card">
+                    <img src="images\drone5.png" alt="" />
+                    <div class="explore-latest-article-card-text">
+                        <p class="card-header">Agriculture</p>
                         <p class="text">
                             Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
                             Morbi accumsan ipsum urna eu felis dapibus condimentum sit amet a augue.
@@ -117,12 +122,12 @@
             </div>
     
             <div class="explore-other">
-                <img src="images\drone6.PNG" alt="" />
+                <img src="images\drone6.png" alt="" />
                 <div class="explore-other-more">
                     <div class="explore-other-more-actions">
                         <img
                             class="explore-other-more-actions-img"
-                            src="images\drone5.PNG"
+                            src="images\drone5.png"
                             alt=""
                         />
                         <div class="explore-more-actions-info">
@@ -135,47 +140,64 @@
                     </div>
                     <img src="images\drone3.PNG" alt="" />
                 </div>
-                <img src="images\drone12.PNG" alt="" />
+                <img src="images\drone2.PNG" alt="" />
             </div>
         </section>
 
         <section class="latest-article">
             <p class="section-header">Latest Article</p>
-            <div class="articles">
-                <article>
-                    <img src="images\drone9.PNG" alt="First drone in latest article">
-                    <div>
-                        <p class="article-header">Duis sed odio sit amet nibh vulputate</p>
+            <div class="explore-latest-article-cards">
+                <div class="explore-latest-article-card">
+                    <img src="images\drone7.PNG" alt="First drone in latest article">
+                    <div class="explore-latest-article-card-text">
+                        <p class="card-header">Duis sed odio sit amet nibh vulputate</p>
                         <p class="text">
                             Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
                             Morbi accumsan ipsum urna eu felis dapibus condimentum sit amet a augue.
                         </p>
                     </div>
                     <button class="explore-and-latest-article-button">Read more</button>
-                </article>
-                <article>
-                    <img src="images\drone10.PNG" alt="Second drone in latest article">
-                    <div>
-                        <p class="article-header">Morbi accumsan ipsum urna eu felis dapibus</p>
+                </div>
+                <div class="explore-latest-article-card">
+                    <img src="images\drone4.png" alt="Second drone in latest article">
+                    <div class="explore-latest-article-card-text">
+                        <p class="card-header">Morbi accumsan ipsum urna eu felis dapibus</p>
                         <p class="text">
                             Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
                             Morbi accumsan ipsum urna eu felis dapibus condimentum sit amet a augue.
                         </p>
                     </div>
                     <button class="explore-and-latest-article-button">Read more</button>
-                </article>
-                <article>
-                    <img src="images\drone11.PNG" alt="Third drone in latest article">
-                    <div>
-                        <p class="article-header">Cursus a sit amet mauris duis sed odio</p>
+                </div>
+                <div class="explore-latest-article-card">
+                    <img src="images\drone8.png" alt="Third drone in latest article">
+                    <div class="explore-latest-article-card-text">
+                        <p class="card-header">Cursus a sit amet mauris duis sed odio</p>
                         <p class="text">
                             Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
                             Morbi accumsan ipsum urna eu felis dapibus condimentum sit amet a augue.
                         </p>
                     </div>
                     <button class="explore-and-latest-article-button">Read more</button>
-                </article>
+                </class="explore-latest-article-card">
             </div>
+        </section>
+
+        <section class="Subscribe-Us"> 
+            <div id="Subscribe-Us-Text">
+               <p class="section-header">Subscribe Us</p>  
+               <p class="text" id="subscribe-us-title"><b>Subscribe My New Letters For All Offers & Lattest News</b></p>
+               <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, aspernatur
+                 unde. Sunt doloremque optio molestiae quod. Molestiae quod totam volup
+                 cupiditate non officia eius, aliquam ex doloremque optio molestiae quod!</p>
+               <div id="button-and-email">
+                   <input type="email" name="email" id="user-input-email" autocomplete="on" placeholder="Enter your email adress here">
+                   <button class="entry-and-about-us-button">Read More</button>
+               </div>
+           </div>   
+           <div class="About-Subscribe-img">
+              <img src="images\drone2.png" alt="">
+           </div>          
         </section>
 
         <section class="service-info">
@@ -193,7 +215,7 @@
                     <button>Read more</button>
                 </div>
             </div>
-            <div class="service-info-divs">
+            <div class="service-info-divs" id="third">
                 <img src="images\fly-safe.png" alt="fly-safe">
                 <div class="text-and-button">
                     <p>Fly Safe</p>
@@ -242,7 +264,10 @@
         </section>
 
         <section class="copyright-social-media">
-            <p>Copyright © 2022 Templates Jungle Rights Reserved. Feedback on web experience</p>
+            <p>
+                Copyright © 2022 Templates Jungle Rights Reserved. Feedback on web
+                experience
+            </p>
             <div id="social-media-icons">
                 <i class="fa fa-twitter"></i>
                 <i class="fa fa-google-plus"></i>
@@ -250,5 +275,6 @@
             </div>
         </section>
     </footer>
-</body>
-</html> 
+    </main>
+  </body>
+</html>
