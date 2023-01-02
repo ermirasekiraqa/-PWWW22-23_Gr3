@@ -6,157 +6,244 @@ const products = [
             productname: "Product Name",
             filename: "/drone1.png",
             price: 100,
-            rates: 5
+            rates: 5,
+            color: ["/grey", "/blue", "/black", "/red"],
+            flyingTime: "Lorem",
+            batteries: "Lorem",
+            flightRange: "Lorem",
+            cameras: "Lorem",
+            firstPersonView: "Lorem",
+            GPS: "Lorem",
+            repairs: "Lorem",
+            speed: "Lorem"
         }
     },
     {
         product: {
-            id:2,
+            id: 2,
             brand: "Brand",
             productname: "Product Name",
             filename: "/drone2.png",
             price: 200,
-            rates: 5
+            rates: 5,
+            color: ["/grey", "/blue", "/black", "/red"],
+            flyingTime: "Lorem",
+            batteries: "Lorem",
+            flightRange: "Lorem",
+            cameras: "Lorem",
+            firstPersonView: "Lorem",
+            GPS: "Lorem",
+            repairs: "Lorem",
+            speed: "Lorem"
         }
     },
     {
         product: {
-            id:3,
+            id: 3,
             brand: "Brand",
             productname: "Product Name",
             filename: "/drone3.png",
             price: 300,
-            rates: 5
+            rates: 5,
+            color: ["/grey", "/blue", "/black", "/red"],
+            flyingTime: "Lorem",
+            batteries: "Lorem",
+            flightRange: "Lorem",
+            cameras: "Lorem",
+            firstPersonView: "Lorem",
+            GPS: "Lorem",
+            repairs: "Lorem",
+            speed: "Lorem"
         }
     },
     {
         product: {
-            id: 1,
+            id: 4,
             brand: "Brand",
             productname: "Product Name",
             filename: "/drone1.png",
             price: 100,
-            rates: 5
+            rates: 5,
+            color: ["/grey", "/blue", "/black", "/red"],
+            flyingTime: "Lorem",
+            batteries: "Lorem",
+            flightRange: "Lorem",
+            cameras: "Lorem",
+            firstPersonView: "Lorem",
+            GPS: "Lorem",
+            repairs: "Lorem",
+            speed: "Lorem"
         }
     },
     {
         product: {
-            id:2,
+            id: 5,
             brand: "Brand",
             productname: "Product Name",
             filename: "/drone2.png",
             price: 200,
-            rates: 5
+            rates: 5,
+            color: ["/grey", "/blue", "/black", "/red"],
+            flyingTime: "Lorem",
+            batteries: "Lorem",
+            flightRange: "Lorem",
+            cameras: "Lorem",
+            firstPersonView: "Lorem",
+            GPS: "Lorem",
+            repairs: "Lorem",
+            speed: "Lorem"
         }
     },
     {
         product: {
-            id:3,
+            id: 6,
             brand: "Brand",
             productname: "Product Name",
             filename: "/drone3.png",
             price: 300,
-            rates: 5
+            rates: 5,
+            color: ["/grey", "/blue", "/black", "/red"],
+            flyingTime: "Lorem",
+            batteries: "Lorem",
+            flightRange: "Lorem",
+            cameras: "Lorem",
+            firstPersonView: "Lorem",
+            GPS: "Lorem",
+            repairs: "Lorem",
+            speed: "Lorem"
         }
     },
     {
         product: {
-            id: 1,
+            id: 7,
             brand: "Brand",
             productname: "Product Name",
             filename: "/drone1.png",
             price: 100,
-            rates: 5
+            rates: 5,
+            color: ["/grey", "/blue", "/black", "/red"],
+            flyingTime: "Lorem",
+            batteries: "Lorem",
+            flightRange: "Lorem",
+            cameras: "Lorem",
+            firstPersonView: "Lorem",
+            GPS: "Lorem",
+            repairs: "Lorem",
+            speed: "Lorem"
         }
     },
     {
         product: {
-            id:2,
+            id: 8,
             brand: "Brand",
             productname: "Product Name",
             filename: "/drone2.png",
             price: 200,
-            rates: 5
+            rates: 5,
+            color: ["/grey", "/blue", "/black", "/red"],
+            flyingTime: "Lorem",
+            batteries: "Lorem",
+            flightRange: "Lorem",
+            cameras: "Lorem",
+            firstPersonView: "Lorem",
+            GPS: "Lorem",
+            repairs: "Lorem",
+            speed: "Lorem"
         }
     },
     {
         product: {
-            id:3,
+            id: 9,
             brand: "Brand",
             productname: "Product Name",
             filename: "/drone3.png",
             price: 300,
-            rates: 5
+            rates: 5,
+            color: ["/grey", "/blue", "/black", "/red"],
+            flyingTime: "Lorem",
+            batteries: "Lorem",
+            flightRange: "Lorem",
+            cameras: "Lorem",
+            firstPersonView: "Lorem",
+            GPS: "Lorem",
+            repairs: "Lorem",
+            speed: "Lorem"
         }
     },
     {
         product: {
-            id: 1,
+            id: 10,
             brand: "Brand",
             productname: "Product Name",
             filename: "/drone1.png",
             price: 100,
-            rates: 5
+            rates: 5,
+            color: ["/grey", "/blue", "/black", "/red"],
+            flyingTime: "Lorem",
+            batteries: "Lorem",
+            flightRange: "Lorem",
+            cameras: "Lorem",
+            firstPersonView: "Lorem",
+            GPS: "Lorem",
+            repairs: "Lorem",
+            speed: "Lorem"
         }
     },
     {
         product: {
-            id:2,
+            id: 11,
             brand: "Brand",
             productname: "Product Name",
             filename: "/drone2.png",
             price: 200,
-            rates: 5
+            rates: 5,
+            color: ["/grey", "/blue", "/black", "/red"],
+            flyingTime: "Lorem",
+            batteries: "Lorem",
+            flightRange: "Lorem",
+            cameras: "Lorem",
+            firstPersonView: "Lorem",
+            GPS: "Lorem",
+            repairs: "Lorem",
+            speed: "Lorem"
         }
     },
     {
         product: {
-            id:3,
+            id: 12,
             brand: "Brand",
             productname: "Product Name",
             filename: "/drone3.png",
             price: 300,
-            rates: 5
+            rates: 5,
+            color: ["/grey", "/blue", "/black", "/red"],
+            flyingTime: "Lorem",
+            batteries: "Lorem",
+            flightRange: "Lorem",
+            cameras: "Lorem",
+            firstPersonView: "Lorem",
+            GPS: "Lorem",
+            repairs: "Lorem",
+            speed: "Lorem"
         }
     },
     {
         product: {
-            id: 1,
+            id: 13,
             brand: "Brand",
             productname: "Product Name",
             filename: "/drone1.png",
             price: 100,
-            rates: 5
-        }
-    },
-    {
-        product: {
-            id:2,
-            brand: "Brand",
-            productname: "Product Name",
-            filename: "/drone2.png",
-            price: 200,
-            rates: 5
-        }
-    },
-    {
-        product: {
-            id:3,
-            brand: "Brand",
-            productname: "Product Name",
-            filename: "/drone3.png",
-            price: 300,
-            rates: 5
-        }
-    },
-    {
-        product: {
-            id: 1,
-            brand: "Brand",
-            productname: "Product Name",
-            filename: "/drone1.png",
-            price: 100,
-            rates: 5
+            rates: 5,
+            color: ["/grey", "/blue", "/black", "/red"],
+            flyingTime: "Lorem",
+            batteries: "Lorem",
+            flightRange: "Lorem",
+            cameras: "Lorem",
+            firstPersonView: "Lorem",
+            GPS: "Lorem",
+            repairs: "Lorem",
+            speed: "Lorem"
         }
     }
 ]

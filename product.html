@@ -15,7 +15,8 @@
     >
     <link rel="stylesheet" href="shop-style.css">
     <link rel="stylesheet" href="normalize.css">
-    <script src="shop-functions.js" defer="true"></script>
+    <script src="shop-data.js"></script>
+    <script src="single-product-functions.js" defer="true"></script>
     <title>Modern Drone Technology</title>
 </head>
 <body>
@@ -44,10 +45,10 @@
         </nav>
     </header>
     <main>
-        <section class="single-product">
+        <section id="product-card" class="single-product">
             <div id="images">
                 <div id="main-img">
-                    <img id="main" src="shop_images\drone1.png" alt="">
+                    <img id="main" src="" alt="">
                 </div>
                 <div id="smaller-images">
                     <div id="small-img">
@@ -63,10 +64,10 @@
             </div>
             <div class="prod-description">
                 <div class="prod-info">
-                    <h4 id="prod-name">Modern Technology Drone</h4>
-                    <h1 id="prod-price">$100</h1>
+                    <h4 id="prod-name"></h4>
+                    <h1 id="prod-price"></h1>
                     <div id="quantity-add-button">
-                        <input type="number" value="1">
+                        <input type="number" value="1" min="1">
                         <button class="entry-and-about-us-button">Add to cart</button>
                     </div>
                 </div>
@@ -78,35 +79,35 @@
                         </tr>
                         <tr>
                             <td><b>Flying time</b></td>
-                            <td><i>Lorem</i></td>
+                            <td><i id="flying-time"></i></td>
                         </tr>
                         <tr>
                             <td><b>Batteries</b></td>
-                            <td><i>Lorem</i></td>
+                            <td><i id="batteries"></i></td>
                         </tr>
                         <tr>
                             <td><b>Flight range</b></td>
-                            <td><i>Lorem</i></td>
+                            <td><i id="flight-range"></i></td>
                         </tr>
                         <tr>
                             <td><b>Cameras</b></td>
-                            <td><i>Lorem</i></td>
+                            <td><i id="cameras"></i></td>
                         </tr>
                         <tr>
                             <td><b>First person view</b></td>
-                            <td><i>Lorem</i></td>
+                            <td><i id="first-person-view"></i></td>
                         </tr>
                         <tr>
                             <td><b>GPS</b></td>
-                            <td><i>Lorem</i></td>
+                            <td><i id="gps"></i></td>
                         </tr>
                         <tr>
                             <td><b>Repairs</b></td>
-                            <td><i>Lorem</i></td>
+                            <td><i id="repairs"></i></td>
                         </tr>
                         <tr>
                             <td><b>Speed</b></td>
-                            <td><i>Lorem</i></td>
+                            <td><i id="speed"></i></td>
                         </tr>
                     </table>
                 </div>
