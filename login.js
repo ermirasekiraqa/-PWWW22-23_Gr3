@@ -11,17 +11,16 @@ function login() {
     const email = emailInput.value;
     //@ts-ignore
     const password = passwordInput.value;
-
-    //check if credentials are correct
-
-    //suppose user exists:
-    localStorage.setItem("user", email);
-
+    const userObj = {
+      email: email,
+      bag: [],
+    };
+    const user = JSON.stringify(userObj);
+    localStorage.setItem("user", user);
     //@ts-ignore
     emailInput.value = "";
     //@ts-ignore
     passwordInput.value = "";
-
     location.href = "index.html";
   });
 }
