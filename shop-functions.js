@@ -1,3 +1,4 @@
+
 function outputProduct(item) {
     let productDiv = document.createElement("div");
     productDiv.className = "product";  
