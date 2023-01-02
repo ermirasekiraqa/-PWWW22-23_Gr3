@@ -18,6 +18,7 @@ header a {
   color: unset;
   text-decoration: none;
 }
+
 #user-account-info {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -124,7 +125,13 @@ header a {
   color: black;
 }
 
-#header-menu ul li:hover {
+#header-menu ul li a:hover {
+  color: var(--light-red);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+#header-menu ul li i:hover {
   color: var(--light-red);
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
