@@ -194,6 +194,105 @@ footer {
   text-align: center;
 }
 
+#Achivements{
+  padding: var(--padding);
+  display: block;
+}
+
+#Achivements .container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 250px;
+  padding-top: 50px;
+}
+
+#Achivements .container .boxes{
+  position: relative;
+  width: 400px;
+  height: 100px;
+  background-color: #fff;
+  transition: 0.7s ease-in-out;
+  cursor: pointer;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.025);
+}
+
+#Achivements .container .boxes:nth-child(1)
+{
+  transform: translateX(-90px);
+}
+
+#Achivements .container .boxes:nth-child(3)
+{
+  transform: translateX(90px);
+}
+
+#Achivements .container:hover .boxes:nth-child(1)
+{
+  transform: translateX(0);
+}
+
+#Achivements .container:hover .boxes:nth-child(3)
+{
+  transform: translateX(0);
+}
+
+/* krijimi i pjeseve me ngjyra ne fillim */
+.container .boxes::before
+{
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: var(--clr);
+  transition: 0.7s ease-in-out;
+}
+
+.container .boxes:hover::before{
+  width: 100%;
+}
+
+.container .boxes .content{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.container .boxes .icon{
+  position: relative;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  font-size: 2.5em;
+  color: var(--clr);
+  padding-left: 40px;
+}
+
+#ach-text, #cons-text, #empl-text{
+  padding-right: 10px;
+  color: var(--clr);
+  margin-bottom: -5px;
+}
+
+.container .boxes:hover .content .icon{
+  color: #fff;
+}
+
+.container .boxes .text{
+  padding-right: 20px;
+}
+
+.container .boxes:hover .content .text{
+ color: #fff;
+}
+
+.container .boxes:hover .content #ach-text,.container .boxes:hover .content #cons-text,.container .boxes:hover .content #empl-text{
+  color: #fff;
+ }
+
+
  #app-link {
   text-decoration: none;
   color: var(--light-red);
@@ -216,7 +315,11 @@ footer {
   font-size: 20px;
 }
 
-
 #App h2{
   padding: var(--padding);
 }
+#App video{
+  position: relative;
+  padding-left: 280px;
+  padding-top: 40px;
+ }
