@@ -216,3 +216,7 @@ footer {
   font-size: 20px;
 }
 
+
+#App h2{
+  padding: var(--padding);
+}
