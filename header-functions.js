@@ -1,5 +1,6 @@
 function displayHeaderActions() {
   const header = document.querySelector("header");
+  console.log("--- ", header);
   const user = localStorage.getItem("user");
   if (user) {
     const parsedUser = JSON.parse(user);
@@ -62,6 +63,7 @@ function createDisplayHeaderActions() {
   return headerContainer;
 }
 function displayUserAccountInfoHeader(name) {
+  const header = document.querySelector("header");
   const container = document.createElement("div");
   container.setAttribute("id", "user-account-info");
 
@@ -71,9 +73,43 @@ function displayUserAccountInfoHeader(name) {
   const spanEl = document.createElement("span");
   spanEl.textContent = name;
 
+  container.addEventListener("click", () => {
+    const logoutMenu = createLogOutMenu(container);
+    header?.prepend(logoutMenu);
+  });
   container.append(icon, spanEl);
   return container;
 }
+
+function createLogOutMenu(accountMenu) {
+  const header = document.querySelector("header");
+  // 	<!-- <div id="logout-menu">
+  // 	<ol>
+  // 		<li>View Profile</li>
+  // 		<li>Log out</li>
+  // 	</ol>
+  // </div>
+  const logoutMenu = document.createElement("div");
+  logoutMenu.setAttribute("id", "logout-menu");
+
+  const list = document.createElement("ol");
+  const viewProfileElement = document.createElement("li");
+  viewProfileElement.textContent = "View Profile";
+  const logoutElement = document.createElement("li");
+  logoutElement.textContent = "Log Out";
+  logoutElement.addEventListener("click", () => {
+    localStorage.clear();
+    //@ts-ignore
+    header?.removeChild(accountMenu);
+    header?.removeChild(logoutMenu);
+    displayHeaderActions();
+  });
+
+  list.append(viewProfileElement, logoutElement);
+  logoutMenu.append(list);
+  return logoutMenu;
+}
+
 function main() {
   displayHeaderActions();
 }
