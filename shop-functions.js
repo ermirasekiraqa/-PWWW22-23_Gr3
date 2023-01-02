@@ -1,6 +1,8 @@
+// Create products cards
 function outputProduct(item) {
     let productDiv = document.createElement("div");
-    productDiv.className = "product";  
+    productDiv.className = "product";
+    productDiv.dataset.productId = item.product.id;  
     productDiv.appendChild(createProductImg(item));
     productDiv.appendChild(createProductDescription(item));
     return productDiv;
@@ -8,7 +10,8 @@ function outputProduct(item) {
 
 function createProductImg(item) {
     let productAnchor = document.createElement("a");
-    productAnchor.href = "product" + item.product.id + ".html";
+    productAnchor.href = "product.html";
+    productAnchor.onclick = setProductToLoadInSessionStorage;
     let productImg = document.createElement("img");
     productImg.src = "shop_images" + item.product.filename;
     productAnchor.appendChild(productImg);
@@ -57,26 +60,20 @@ function createProductPrice(item) {
 
 function createShoppingCartIcon(item) {
     let cartAnchor = document.createElement("a");
-    cartAnchor.href = "product" + item.product.id + ".html";
+    cartAnchor.href = "#";
     let cartIcon = document.createElement("i");
     cartIcon.className = "fa fa-shopping-cart cart";
     cartAnchor.appendChild(cartIcon);
     return cartAnchor;
 }
 
-let productSection = document.getElementById("product-container");
-
-// View multi-color products 
-let mainImg = document.getElementById("main");
-let smallImg = document.getElementsByClassName("small");
-
-for (let i = 0; i < smallImg.length; i++) {
-    smallImg[i].onclick = function() {
-        const temp = mainImg.src;
-        mainImg.src = smallImg[i].src;
-        smallImg[i].src = temp;
-    }
+// Load single product page
+function setProductToLoadInSessionStorage(clickEvent) {
+    let productId = parseInt(clickEvent.currentTarget.parentElement.dataset.productId);
+    sessionStorage.setItem("loadedProductPage", productId);
 }
+
+let productSection = document.getElementById("product-container");
 
 // Pagination
 let rows = 3;
@@ -85,7 +82,7 @@ let pageSize = Math.ceil(products.length/(rows*3));
 
 function displayProducts(products) {
     productSection.innerHTML = "";
-    for (let i = (currentPage - 1) * (rows * 3); i < currentPage * rows * 3; i++) {
+    for (let i = (currentPage - 1) * (rows * 3); i < currentPage * rows * 3 && i < products.length; i++) {
         productSection.appendChild(outputProduct(products[i]));
     }
 }
@@ -132,8 +129,8 @@ function prevPage() {
     displayProducts(products);
 }
 
-function loadPage(clickevent) {
-    let pageNumber = parseInt(clickevent.target.innerText);
+function loadPage(clickEvent) {
+    let pageNumber = parseInt(clickEvent.target.innerText);
     currentPage = pageNumber;
     displayProducts(products);
 }
