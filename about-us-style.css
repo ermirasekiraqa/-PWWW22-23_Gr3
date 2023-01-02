@@ -197,6 +197,7 @@ footer {
 #Achivements{
   padding: var(--padding);
   display: block;
+  background-color: var(--background-grey);
 }
 
 #Achivements .container{
@@ -314,12 +315,12 @@ footer {
   text-align: center;
   font-size: 20px;
 }
-
-#App h2{
-  padding: var(--padding);
-}
 #App video{
-  position: relative;
-  padding-left: 280px;
-  padding-top: 40px;
+  position:relative;
+  left: 200px;
+  background-color:black
+  
+ }
+ #App{
+  padding: var(--padding);
  }
