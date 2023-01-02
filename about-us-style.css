@@ -292,8 +292,17 @@ footer {
 .container .boxes:hover .content #ach-text,.container .boxes:hover .content #cons-text,.container .boxes:hover .content #empl-text{
   color: #fff;
  }
+ /* -------------------------------------------------------------- */
+ #history{
+  padding: var(--padding);
+  display: flex;
+ }
+ 
 
 
+
+
+/* ---------------------------------------------------- */
  #app-link {
   text-decoration: none;
   color: var(--light-red);
