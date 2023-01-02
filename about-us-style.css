@@ -295,8 +295,63 @@ footer {
  /* -------------------------------------------------------------- */
  #history{
   padding: var(--padding);
-  display: flex;
  }
+ #history .container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+ }
+ 
+ #history .container .box{
+  background-color: var(--background-grey);
+  position: relative;
+  width: 350px;
+  padding: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+  border-radius: 4px;
+  margin: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  
+  }
+
+ #history .container .box .icon{
+    position: relative;
+    width: 90px;
+    height: 60px;
+    color: #fff;
+    background: #000;
+    padding-top: 15px;
+    text-align: center;
+    /* justify-content: center; */
+    align-items: center; 
+    margin: 0 auto;
+    border-radius: 40%;
+    font-weight: 900;
+    background-color: #dc7957;
+    transition: 1s;
+   }
+
+   #history .container .box:hover p{
+   color: #fff;
+   }
+   #history .container .box:hover .icon{
+    z-index: -1;
+    box-shadow: 0 0 0 400px var(--light-red);
+   }
+  #history .container .box .content{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s; 
+  }
+
+
+  
+  
+  
+
+
+
  
 
 
