@@ -120,10 +120,11 @@ header {
     border: 2px solid var(--light-grey);
     border-radius: 25px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
-    cursor: pointer;
     position: relative;
     margin-bottom: 20px;
 }
+
+
 
 .product:hover {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
@@ -168,6 +169,11 @@ header {
     text-align: center;
 }
 
+.product-description a i:hover {
+    font-size: 18px;
+    background-color: white;
+}
+
 .product-description .cart {
     width: 40px;
     height: 40px;
@@ -181,24 +187,30 @@ header {
     right: 10px;
 }
 
-/* Page styling */
 .pages {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
 }
 
-.pages a {
-    text-decoration: none;
-    color: white;
+.pages button {
     background-color: var(--light-red);
-    border-radius: 4px;
-    font-weight: 600;
-    padding: 8px 12px;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.pages a i {
-    font-size: 14px;
-    font-weight: 600;
-} 
+.pages button:hover {
+    color: var(--background-grey);
+    font-size: 18px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
 
 /* Single product styling */
 .single-product {
@@ -207,23 +219,54 @@ header {
     gap: 50px;
 }
 
-#prod-image {
+/* #prod-image { */
+#images {
     text-align: center;
+    width: 50%;
+    min-width: 150px;
+    max-width: 400px;
+}
+
+#main-img {
+    margin-bottom: 10px;
+    border: 2px solid var(--light-grey);
+    border-radius: 25px;
+    padding: 7px;
+
+}
+
+#main-img:hover {
+    cursor: pointer;
+}
+
+#main {
+    width: 100%;
+    background-color: var(--background-grey);
+    border-radius: 20px;
+}
+
+#smaller-images {
+    display: flex;
+    gap: 10px;
+}
+
+.small {
+    background-color: var(--background-grey);
+    border-radius: 20px;
+}
+
+#small-img {
+    padding: 5px;
     border: 2px solid var(--light-grey);
     border-radius: 25px;
 }
 
-#prod-image {
-    width: 50%;
-    min-width: 150px;
-    max-width: 400px;
-    padding: 10px;
+#small-img:hover {
+    cursor: pointer;
 }
 
-#prod-image img {
+.small {
     width: 100%;
-    background-color: var(--background-grey);
-    border-radius: 20px;
 }
 
 .prod-description {
