@@ -35,7 +35,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li>Professional</li>
-            <li>Enterprise</li>
+            <li id="active">About us</li>
             <li>Explore</li>
             <li>Contact</li>
             <li><i class="fa fa-shopping-cart"></i></li>
@@ -66,7 +66,7 @@
             <section id="Achivements">
                 <div>
                     <p class="section-header">You Make Us Work Harder</p>
-                    <p id="video-text" class="text">Some of the best videos recorded with drones by our customers who were satisfied with our services </p>
+                    <p id="video-text" class="text">Some of our achivements and collaboration we did with global companies </p>
                 </div>
                 <div class="container">
                     <div class="boxes" style="--clr:#fc5f9b;">
@@ -97,30 +97,25 @@
                         </div>
                     </div>
                 </div>
-                
-                <script>
-                    const clip = document.querySelectorAll('.clip');
-                    for(let i = 0; i<clip.length; i++){
-                    clip[i].addEventListener('mouseenter', function(e)
-                    {
-                        clip[i].play()
-                    })
-            
-                    clip[i].addEventListener('mouseout', function(e)
-                    {
-                        clip[i].pause()
-                    })
-                }
-                </script>
+               
             </section>
             <section id="App">
                 <p class="section-header">Download Our <a id="app-link" href="https://play.google.com/store/apps/details?id=com.droneflight_shoppingonline.drone">App</a></p>
-
-                <video width="800" height="440"  autoplay muted loop>
-                    <source src="about_us_images\app-download.mp4" type="video/mp4">
+                <video width="500" src="about_us_images\app-download.mp4" height="500" muted class="vid">
+                    <!-- <source src="about_us_images\app-download.mp4" type="video/mp4"> -->
                 </video>
-
             </section>
+            <script>
+                let clip = document.querySelector(".vid")
+                clip.addEventListener("mouseover", function(e){
+                    clip.play();
+                })
+                 clip = document.querySelector(".vid")
+                clip.addEventListener("mouseout", function(e){
+                    clip.pause();
+                })
+            </script>
+ 
             
     </main>
     <footer>
@@ -173,6 +168,7 @@
                 <i class="fa fa-linkedin"></i>
             </div>
         </section>
-    </footer>
+    </footer>   
+
 </body>
 </html>
