@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="signup.css" />
+    <script defer src="signup.js"></script>
     <title>Sign up</title>
   </head>
   <body>
@@ -14,19 +15,26 @@
       <div class="container">
         <form action="" method="post" id="signup-form">
           <h1>Join Our Community!</h1>
-          <input type="text" placeholder="Username" required="true" />
-          <input type="email" placeholder="Email" required="true" />
+          <input
+            type="text"
+            placeholder="Username"
+            required="true"
+            id="username"
+          />
+          <input type="email" placeholder="Email" required="true" id="email" />
           <input
             type="password"
             placeholder="Password"
             required="true"
             minlength="5"
+            id="password"
           />
           <input
             type="password"
             placeholder="Confirm Password"
             required="true"
             minlength="5"
+            id="confirm-password"
           />
           <label for="#terms&cond" id="terms-label">
             <input type="checkbox" id="terms&cond" required="true" />
