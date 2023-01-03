@@ -15,13 +15,13 @@ main h1 {
   color: #dc7957;
 }
 
-main a {
+#signup-link {
   color: #dc7957;
   margin: auto;
   padding: 20px;
   font-size: 14px;
 }
-main a:hover {
+#signup-link:hover {
   color: #ff1700;
   font-weight: 600;
 }
@@ -63,4 +63,15 @@ main a:hover {
 #login-form button:hover {
   background-color: #ff1700;
   scale: 1.1;
+}
+
+#main-page-link {
+  margin: auto;
+  color: #dc7957;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#main-page-link:hover {
+  scale: 1.2;
 }

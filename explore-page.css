@@ -15,7 +15,6 @@ img {
   width: 100%;
 }
 
-
 #explore {
   color: var(--light-red);
 }
@@ -215,22 +214,7 @@ main {
   background-color: #ff1e1e;
 }
 
-
-
 /* modal styling */
-.modal-container {
-  border: solid 1px black;
-  display: grid;
-  place-content: center;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-}
 
 #subscribe-modal {
   border-radius: 5px;
@@ -247,16 +231,4 @@ main {
 #subscribe-modal p {
   font-size: 14px;
   text-align: center;
-}
-
-.close-btn {
-  position: absolute;
-  right: 0;
-  cursor: pointer;
-  border: none;
-  background-color: unset;
-  font-size: 20px;
-  color: #dc7957;
-  padding: 10px;
-  font-weight: 900;
 }
