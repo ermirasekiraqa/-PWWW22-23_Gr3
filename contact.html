@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="common.css">
     <script defer src="header-functions.js"></script>
+    <script defer src="contact.js"></script>
     <title>Modern Drone Technology</title>
 </head>
 <body>
@@ -69,15 +70,16 @@
                  </address>
             </section>
             <section id="form-details">
-                <form action="">
+                <form action="" onsubmit="sendEmail(); reset(); return false;">
                     <span>LEAVE A MESSAGE</span>
                     <h2>We love to hear from you</h2>
-                    <input type="text" name="" id="" placeholder="Your Name">
-                    <input type="text" name="" id="" placeholder="E-mail">
-                    <input type="text" name="" id="" placeholder="Subject">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
-                   <button>Submit</button>
+                    <input type="text" name="" id="full_name" placeholder="Your Name">
+                    <input type="email" name="" id="email_id" placeholder="E-mail">
+                    <input type="text" name="" id="subject" placeholder="Subject">
+                    <textarea name="" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
+                   <button onclick="sendEmail()">Submit</button>
                 </form>
+
                 <div class="people">
                     <div>
                         <img src="contact_images\person1.jpeg" alt="">
@@ -158,5 +160,12 @@
             </div>
         </section>
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('DHPr1WNY7fh4Bumzr');
+        })();
+    </script>
 </body>
 </html>
