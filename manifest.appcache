@@ -1,0 +1,15 @@
+CACHE MANIFEST
+#DATE 2023-01-03
+CACHE:
+style.css
+common.css
+index-functions.js
+header-functions.js
+images
+
+NETWORK:
+*
+FALLBACK:
+#static.html
+
+
