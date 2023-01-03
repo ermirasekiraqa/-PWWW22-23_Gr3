@@ -1,5 +1,5 @@
 if (!localStorage.getItem("user")) {
-    window.location.replace("login.html");
+  window.location.replace("login.html");
 }
 
 const user = localStorage.getItem("user");
@@ -7,124 +7,212 @@ const parsedUser = JSON.parse(user);
 
 let cart = parsedUser.bag;
 
-let tableHeaders = ["", "Product Image", "Product name", "Price per unit", "Quantity", "Price"]; 
+let tableHeaders = [
+  "",
+  "Product Image",
+  "Product name",
+  "Price per unit",
+  "Quantity",
+  "Price",
+];
 let allProductsPrices = [];
 
 function displayProductsInCart() {
-    let cartProductsContainer = document.getElementById("shopping-cart");
+  const shoppingCart = document.querySelector(".shopping-cart-and-button");
+  const user = localStorage.getItem("user");
+  const parsedUser = JSON.parse(user);
+  let cart = parsedUser.bag;
+  let cartProductsContainer = document.createElement("div");
+  cartProductsContainer.setAttribute("id", "shopping-cart");
+  if (cart.length === 0) {
+    let message = document.createElement("h1");
+    message.innerText = "Nothing to display! No items in cart!";
+    cartProductsContainer.appendChild(message);
+  } else {
+    // create a table to display each product in cart
+    let cartProductsTable = document.createElement("table");
+    cartProductsTable.cellSpacing = 0;
+    cartProductsTable.cellPadding = 10;
 
-    if (cart.length === 0) {
-        let message = document.createElement("h1");
-        message.innerText = "Nothing to display! No items in cart!"
-        cartProductsContainer.appendChild(message);
-    } 
-    else {
-        // create a table to display each product in cart
-        let cartProductsTable = document.createElement("table");
-        cartProductsTable.cellSpacing = 0;
-        cartProductsTable.cellPadding = 10;
+    // create header for table
+    let headerRow = createHeaderRow();
+    cartProductsTable.appendChild(headerRow);
 
-        // create header for table
-        let headerRow = createHeaderRow();
-        cartProductsTable.appendChild(headerRow);
-
-        // display each product's data 
-        for (let i = 0; i < cart.length; i++) {
-            cartProductsTable.appendChild(createProductDataRow(i));
-        }
-
-        // calculate total price in cart
-        cartProductsTable.appendChild(createTotalPriceRow());
-
-        cartProductsContainer.appendChild(cartProductsTable);
-
-        // checkout button
-        let checkoutSection = document.createElement("div");
-        checkoutSection.appendChild(createCheckoutButton());
-
-        cartProductsContainer.appendChild(checkoutSection);
+    // display each product's data
+    for (let i = 0; i < cart.length; i++) {
+      cartProductsTable.appendChild(createProductDataRow(i));
     }
+
+    // calculate total price in cart
+    cartProductsTable.appendChild(createTotalPriceRow());
+
+    cartProductsContainer.appendChild(cartProductsTable);
+
+    // checkout button
+    let checkoutSection = document.createElement("div");
+    checkoutSection.appendChild(createCheckoutButton());
+    cartProductsContainer.appendChild(checkoutSection);
+  }
+  shoppingCart?.appendChild(cartProductsContainer);
 }
 
 function createHeaderRow() {
-    let headerRow = document.createElement("tr");
-        for (let i = 0; i < tableHeaders.length; i++) {
-            let header = document.createElement("th");
-            header.innerText = tableHeaders[i];
-            headerRow.appendChild(header);
-        }
-    return headerRow;
+  let headerRow = document.createElement("tr");
+  for (let i = 0; i < tableHeaders.length; i++) {
+    let header = document.createElement("th");
+    header.innerText = tableHeaders[i];
+    headerRow.appendChild(header);
+  }
+  return headerRow;
 }
 
 function createProductDataRow(j) {
-    let tableRow = document.createElement("tr");
-            
-    // Ordering Number
-    let orderingNumber = tableRow.insertCell(0);
-    orderingNumber.innerText = j + 1;
+  let tableRow = document.createElement("tr");
 
-    // Product image
-    let productImage = tableRow.insertCell(1);
-    let image = document.createElement("img");
-    image.src = cart[j].drone.filename;
-    productImage.append(image);
+  // Ordering Number
+  let orderingNumber = tableRow.insertCell(0);
+  orderingNumber.innerText = j + 1;
 
-    // Product name
-    let productName = tableRow.insertCell(2);
-    productName.innerText = cart[j].drone.productname;
+  // Product image
+  let productImage = tableRow.insertCell(1);
+  let image = document.createElement("img");
+  image.src = cart[j].drone.filename;
+  productImage.append(image);
 
-    // Price per unit
-    let productPrice = tableRow.insertCell(3);
-    productPrice.innerText = "$" + cart[j].drone.price;
+  // Product name
+  let productName = tableRow.insertCell(2);
+  productName.innerText = cart[j].drone.productname;
 
-    // Product quantity
-    let quantity = tableRow.insertCell(4);
-    quantity.innerText = cart[j].prodQuantity;
+  // Price per unit
+  let productPrice = tableRow.insertCell(3);
+  productPrice.innerText = "$" + cart[j].drone.price;
 
-    // Price for all units
-    let price = tableRow.insertCell(5);
-    allProductsPrices[j] = calculatePricePerProduct(cart[j].drone.price, cart[j].prodQuantity);
-    price.innerText = "$" + allProductsPrices[j] ;
+  // Product quantity
+  let quantity = tableRow.insertCell(4);
+  quantity.innerText = cart[j].prodQuantity;
 
-    return tableRow;
+  // Price for all units
+  let price = tableRow.insertCell(5);
+  allProductsPrices[j] = calculatePricePerProduct(
+    cart[j].drone.price,
+    cart[j].prodQuantity
+  );
+  price.innerText = "$" + allProductsPrices[j];
+
+  return tableRow;
 }
 
 function createTotalPriceRow() {
-    let totalTableRow = document.createElement("tr");
-    totalTableRow.insertCell(0);
-    totalTableRow.insertCell(1);
-    totalTableRow.insertCell(2);
-    totalTableRow.insertCell(3);
-    let total = totalTableRow.insertCell(4);
-    total.innerText = "Total"; 
+  let totalTableRow = document.createElement("tr");
+  totalTableRow.insertCell(0);
+  totalTableRow.insertCell(1);
+  totalTableRow.insertCell(2);
+  totalTableRow.insertCell(3);
+  let total = totalTableRow.insertCell(4);
+  total.innerText = "Total";
 
-    let totalPrice = totalTableRow.insertCell(5);
-    totalPrice.innerText = "$" + calculateTotalPrice(allProductsPrices);
+  let totalPrice = totalTableRow.insertCell(5);
+  totalPrice.innerText = "$" + calculateTotalPrice(allProductsPrices);
 
-    return totalTableRow;
+  return totalTableRow;
 }
 
 function createCheckoutButton() {
-    let checkoutButton = document.createElement("button");
-    checkoutButton.innerText = "Checkout";
-    checkoutButton.onclick = checkout;
-    return checkoutButton;
+  let checkoutButton = document.createElement("button");
+  checkoutButton.innerText = "Checkout";
+  checkoutButton.onclick = checkout;
+  return checkoutButton;
 }
 
 function calculatePricePerProduct(price, quantity) {
-    return price * quantity;
+  return price * quantity;
 }
 
 function calculateTotalPrice(productsPrices) {
-    let total = 0;
-    for (let i = 0; i < productsPrices.length; i++) {
-        total += productsPrices[i];
-    }
-    return total;
+  let total = 0;
+  for (let i = 0; i < productsPrices.length; i++) {
+    total += productsPrices[i];
+  }
+  return total;
+}
+
+function createCheckoutForm() {
+  const main = document.querySelector("main");
+  const shoppingCart = document.querySelector("#shopping-cart");
+  const modalContainer = document.createElement("div");
+  modalContainer.setAttribute("class", "modal-container");
+
+  const checkoutModal = document.createElement("div");
+  checkoutModal.setAttribute("id", "checkout-modal");
+
+  const closeBtn = document.createElement("button");
+  closeBtn.setAttribute("class", "close-btn");
+  closeBtn.textContent = "X";
+
+  closeBtn.addEventListener("click", () => {
+    main?.removeChild(modalContainer);
+  });
+
+  const checkoutForm = document.createElement("form");
+  checkoutForm.setAttribute("id", "checkout-form");
+  checkoutForm.setAttribute("action", "post");
+
+  const title = document.createElement("h1");
+  title.textContent = "Enter checkout information";
+
+  const bankNameInput = document.createElement("input");
+  bankNameInput.setAttribute("id", "bank-name");
+  bankNameInput.setAttribute("type", "text");
+  bankNameInput.setAttribute("required", "true");
+  bankNameInput.placeholder = "Bank name";
+
+  const creditCardInput = document.createElement("input");
+  creditCardInput.setAttribute("id", "credit-card-num");
+  creditCardInput.setAttribute("required", "true");
+  creditCardInput.setAttribute("type", "text");
+  creditCardInput.placeholder = "Credit card";
+
+  const phoneNumberInput = document.createElement("input");
+  phoneNumberInput.setAttribute("type", "tel");
+  phoneNumberInput.placeholder = "Phone number";
+  phoneNumberInput.setAttribute("required", "true");
+
+  const addressInput = document.createElement("input");
+  addressInput.setAttribute("type", "text");
+  addressInput.setAttribute("required", "true");
+  addressInput.placeholder = "Address";
+
+  const confirmButton = document.createElement("button");
+  confirmButton.setAttribute("id", "confirm-button");
+  confirmButton.textContent = "Confirm";
+
+  confirmButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const user = localStorage.getItem("user");
+    const parsedUser = JSON.parse(user);
+    parsedUser.bag = [];
+    localStorage.setItem("user", JSON.stringify(parsedUser));
+    main?.removeChild(modalContainer);
+    let cart = document.querySelector(".shopping-cart-and-button");
+    cart?.removeChild(shoppingCart);
+    displayProductsInCart();
+  });
+
+  checkoutForm.append(
+    title,
+    bankNameInput,
+    creditCardInput,
+    phoneNumberInput,
+    addressInput,
+    confirmButton
+  );
+  checkoutModal.append(closeBtn, checkoutForm);
+  modalContainer.append(checkoutModal);
+  main?.append(modalContainer);
 }
 
 function checkout() {
-    // window.location.replace("checkout-form.html");
+  createCheckoutForm();
 }
 
 displayProductsInCart();
