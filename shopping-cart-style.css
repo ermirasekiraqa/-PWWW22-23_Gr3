@@ -47,3 +47,19 @@ body {
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
 }
+
+#shopping-cart table tr td {
+    text-align: center;
+}
+
+#shopping-cart table tr td i {
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+#shopping-cart table tr td i:hover {
+    color: var(--light-red);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
