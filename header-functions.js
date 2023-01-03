@@ -99,6 +99,10 @@ function createLogOutMenu(accountMenu) {
   logoutElement.textContent = "Log Out";
   logoutElement.addEventListener("click", () => {
     localStorage.clear();
+    const url = document.URL;
+    if (url.includes("shopping-cart")) {
+      location.href = "login.html";
+    }
     //@ts-ignore
     header?.removeChild(accountMenu);
     header?.removeChild(logoutMenu);
