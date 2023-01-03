@@ -203,3 +203,28 @@ footer {
   transition-timing-function: ease-out;
   cursor: pointer;
 }
+
+.modal-container {
+  border: solid 1px black;
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.close-btn {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  border: none;
+  background-color: unset;
+  font-size: 20px;
+  color: #dc7957;
+  padding: 10px;
+  font-weight: 900;
+}
