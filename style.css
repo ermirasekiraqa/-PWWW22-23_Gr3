@@ -7,11 +7,19 @@
   --font-size: 14px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Ubuntu", sans-serif;
   overflow-x: hidden;
 }
 
+a {
+  color: unset;
+  text-decoration: none;
+}
 
 /* Entry styling */
 .entry {
@@ -75,6 +83,8 @@ body {
   display: flex;
   padding: var(--padding);
   padding-bottom: 100px;
+  place-content: center;
+  gap: 200px;
 }
 
 .section-header {
@@ -88,11 +98,13 @@ body {
 }
 
 .About-Subscribe-img {
-  margin-left: auto;
+  /* margin: auto; */
+  width: 300px;
 }
 
 .About-Subscribe-img img {
-  width: 300px;
+  width: 100%;
+  height: 100%;
 }
 
 .About-Us p {
@@ -265,6 +277,17 @@ body {
 .Subscribe-Us {
   display: flex;
   padding: var(--padding);
+  place-content: center;
+  gap: 180px;
+}
+
+.Subscribe-Us .About-Subscribe-img {
+  width: 300px;
+}
+
+.Subscribe-Us .About-Subscribe-img img {
+  width: 100%;
+  height: 100%;
 }
 
 #Subscribe-Us-Text p {
@@ -277,6 +300,12 @@ body {
   width: 65%;
   border: none;
   background-color: var(--background-grey);
+  outline: none;
+}
+
+#user-input-email::placeholder {
+  font-size: 14px;
+  padding: 5px;
 }
 
 #subscribe-us-title {
@@ -309,7 +338,7 @@ body {
 .service-info {
   padding: var(--padding);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   background-color: var(--background-grey);
 }
 
@@ -342,5 +371,3 @@ body {
   transition-timing-function: ease-out;
   cursor: pointer;
 }
-
-
