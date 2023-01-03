@@ -2,9 +2,11 @@ if (!localStorage.getItem("user")) {
   window.location.replace("login.html");
 }
 
+// Get user from localStorage
 const user = localStorage.getItem("user");
 const parsedUser = JSON.parse(user);
 
+// Get bag from user
 let cart = parsedUser.bag;
 
 let tableHeaders = [
@@ -99,6 +101,14 @@ function createProductDataRow(j) {
   );
   price.innerText = "$" + allProductsPrices[j];
 
+  // Option to remove item from cart
+  let trash = tableRow.insertCell(6);
+  trash.id = j;
+  let trashIcon = document.createElement("i");
+  trashIcon.className = "fa fa-trash";
+  trashIcon.onclick = removeItemFromCart;
+  trash.appendChild(trashIcon);
+
   return tableRow;
 }
 
@@ -112,6 +122,7 @@ function createTotalPriceRow() {
   total.innerText = "Total";
 
   let totalPrice = totalTableRow.insertCell(5);
+  // totalPrice.id = "total-price";
   totalPrice.innerText = "$" + calculateTotalPrice(allProductsPrices);
 
   return totalTableRow;
@@ -124,10 +135,12 @@ function createCheckoutButton() {
   return checkoutButton;
 }
 
+// Calculate price for each row
 function calculatePricePerProduct(price, quantity) {
   return price * quantity;
 }
 
+// Calculate total price of all items in cart
 function calculateTotalPrice(productsPrices) {
   let total = 0;
   for (let i = 0; i < productsPrices.length; i++) {
@@ -135,6 +148,26 @@ function calculateTotalPrice(productsPrices) {
   }
   return total;
 }
+
+// remove an item from cart
+function removeItemFromCart(clickEvent) {
+  let cartProductsContainer = document.querySelector(
+    ".shopping-cart-and-button"
+  );
+  let rowToBeRemoved = parseInt(clickEvent.currentTarget.parentElement.id);
+  cart.splice(rowToBeRemoved, 1);
+  allProductsPrices.splice(rowToBeRemoved, 1);
+  parsedUser.cart = cart;
+  //@ts-ignore
+  cartProductsContainer.innerHTML = "";
+  localStorage.setItem("user", JSON.stringify(parsedUser));
+  displayProductsInCart();
+}
+
+// function setProductToLoadInSessionStorage(clickEvent) {
+//     let productId = parseInt(clickEvent.currentTarget.parentElement.dataset.productId);
+//     sessionStorage.setItem("loadedProductPage", productId);
+// }
 
 function createCheckoutForm() {
   const main = document.querySelector("main");
