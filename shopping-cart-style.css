@@ -1,0 +1,49 @@
+:root {
+    /* CSS variables */
+    --padding: 60px 200px 60px 200px;
+    --background-grey: #eeeeee;
+    --light-grey: #7c7a7a;
+    --light-red: #dc7957;
+    --font-size: 14px;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+}
+
+.shopping-cart-and-button {
+    padding: var(--padding);
+    display: flex;
+    justify-content: center;
+}
+
+#shopping-cart table tr td img {
+    width: 30%;
+}
+
+#shopping-cart table tr:nth-child(even) {
+    background-color: var(--background-grey);
+}
+
+#shopping-cart div {
+    text-align: center;
+    margin-top: 60px;
+}
+
+#shopping-cart button {
+    margin-top: 16px;
+    background-color: var(--light-red);
+    border: none;
+    height: 40px;
+    width: 130px;
+    font-size: var(--font-size);
+    color: white;
+    cursor: pointer;
+}
+
+#shopping-cart button:hover {
+    color: var(--background-grey);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}

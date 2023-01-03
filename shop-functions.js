@@ -13,7 +13,7 @@ function createProductImg(item) {
     productAnchor.href = "product.html";
     productAnchor.onclick = setProductToLoadInSessionStorage;
     let productImg = document.createElement("img");
-    productImg.src = "shop_images" + item.product.filename;
+    productImg.src = item.product.filename;
     productAnchor.appendChild(productImg);
     return productAnchor;
 }

@@ -25,7 +25,7 @@ for (let i = 0; i < products.length; i++) {
 
 function setProductDetails() {
     // Set main image
-    mainImg.src = "shop_images" + currentProduct.filename;
+    mainImg.src = currentProduct.filename;
 
     // Set product name
     productName.innerText = currentProduct.productname;
@@ -68,5 +68,33 @@ for (let i = 0; i < smallImg.length; i++) {
         const temp = mainImg.src;
         mainImg.src = smallImg[i].src;
         smallImg[i].src = temp;
+
+        // Change the main image of the current product
+        currentProduct.filename = mainImg.src;
     }
+}
+
+// Add functionality to add to cart button
+let addToCartButton = document.getElementById("add-to-cart-button");
+addToCartButton.onclick = addToCart;
+
+function addToCart() {
+    // console.log("here");
+    const user = localStorage.getItem("user");
+    if (!localStorage.getItem("user")) {
+        window.location.replace("login.html");
+    }
+
+    const parsedUser = JSON.parse(user);
+
+    let quantity = document.getElementById("product-quantity").value;
+
+    const productToBeAddedToCart = {
+        prodQuantity: quantity,
+        drone: currentProduct
+      };
+  
+      parsedUser.bag.push(productToBeAddedToCart);
+  
+      localStorage.setItem("user", JSON.stringify(parsedUser));
 }
