@@ -158,16 +158,10 @@ function removeItemFromCart(clickEvent) {
   cart.splice(rowToBeRemoved, 1);
   allProductsPrices.splice(rowToBeRemoved, 1);
   parsedUser.cart = cart;
-  //@ts-ignore
   cartProductsContainer.innerHTML = "";
   localStorage.setItem("user", JSON.stringify(parsedUser));
   displayProductsInCart();
 }
-
-// function setProductToLoadInSessionStorage(clickEvent) {
-//     let productId = parseInt(clickEvent.currentTarget.parentElement.dataset.productId);
-//     sessionStorage.setItem("loadedProductPage", productId);
-// }
 
 function createCheckoutForm() {
   const main = document.querySelector("main");

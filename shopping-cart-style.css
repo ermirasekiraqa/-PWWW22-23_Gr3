@@ -63,6 +63,7 @@ body {
   transition-timing-function: ease-out;
 }
 
+/* Checkout form styling */
 #checkout-form {
   display: grid;
   padding: 40px;
@@ -99,6 +100,7 @@ body {
   font-weight: 500;
   cursor: pointer;
 }
+
 #confirm-button:hover {
   background-color: #ff7f3f;
 }

@@ -79,7 +79,6 @@ let addToCartButton = document.getElementById("add-to-cart-button");
 addToCartButton.onclick = addToCart;
 
 function addToCart() {
-    // console.log("here");
     const user = localStorage.getItem("user");
     if (!localStorage.getItem("user")) {
         window.location.replace("login.html");
@@ -92,9 +91,17 @@ function addToCart() {
     const productToBeAddedToCart = {
         prodQuantity: quantity,
         drone: currentProduct
-      };
+    };
   
-      parsedUser.bag.push(productToBeAddedToCart);
-  
-      localStorage.setItem("user", JSON.stringify(parsedUser));
+    parsedUser.bag.push(productToBeAddedToCart);
+
+    localStorage.setItem("user", JSON.stringify(parsedUser));
+    
+    // Disable button after adding an item to cart
+    addToCartButton.innerText = "Added to cart";
+    addToCartButton.onclick = doNothing;
+}
+
+function doNothing() {
+    
 }
