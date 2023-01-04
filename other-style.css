@@ -40,3 +40,21 @@ body {
 #drag-img {
     width: 80%;
 }
+
+/* Canvas and svg styling */
+.canvas-and-svg {
+    padding: var(--padding);
+    background-color: var(--background-grey);
+    text-align: center;
+}
+
+#my-canvas {
+    border-radius: 20px;
+    background-color: white;
+}
+
+#rounded-rectangle-and-circle {
+    border: 1px rgb(139, 136, 136) solid;
+    border-radius: 20px;
+    background-color: white;
+}
