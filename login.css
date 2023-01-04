@@ -7,6 +7,7 @@ main {
   place-content: center;
   height: 100vh;
   gap: 50px;
+  background: linear-gradient(60deg, #dc7957, #d2001a);
 }
 
 main h1 {
@@ -16,13 +17,13 @@ main h1 {
 }
 
 #signup-link {
-  color: #dc7957;
+  color: #d9d9d9;
   margin: auto;
-  padding: 20px;
+  padding: 30px;
   font-size: 14px;
 }
 #signup-link:hover {
-  color: #ff1700;
+  scale: 1.2;
   font-weight: 600;
 }
 
@@ -35,6 +36,9 @@ main h1 {
   place-items: center;
   border-radius: 5px;
   height: 90%;
+  background-color: white;
+  box-shadow: -5px -10px 10px 2px #d9d9d9, 5px 10px 15px 2px #d9d9d9,
+    -5px 10px 10px 2px #d9d9d9, 5px -10px 15px 2px #d9d9d9;
 }
 
 #login-form input {
@@ -67,7 +71,7 @@ main h1 {
 
 #main-page-link {
   margin: auto;
-  color: #dc7957;
+  color: #d9d9d9;
   text-decoration: none;
   font-size: 14px;
 }
