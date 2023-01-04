@@ -22,7 +22,10 @@ function createDisplayHeaderActions() {
 
   const viewStoreLink = document.createElement("li");
   const viewStoreSpan = document.createElement("span");
-  viewStoreSpan.textContent = "View store";
+  const viewStoreSpanTag = document.createElement("a");
+  viewStoreSpanTag.setAttribute("href", "shop.html");
+  viewStoreSpanTag.textContent = "View store";
+  viewStoreSpan.appendChild(viewStoreSpanTag);
   viewStoreLink.append(viewStoreSpan);
 
   const seperator = document.createElement("li");

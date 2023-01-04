@@ -60,7 +60,8 @@ function createProductPrice(item) {
 
 function createShoppingCartIcon(item) {
     let cartAnchor = document.createElement("a");
-    cartAnchor.href = "#";
+    cartAnchor.href = "product.html";
+    cartAnchor.onclick = setProductToLoadInSessionStorageFromIcon;
     let cartIcon = document.createElement("i");
     cartIcon.className = "fa fa-shopping-cart cart";
     cartAnchor.appendChild(cartIcon);
@@ -70,6 +71,12 @@ function createShoppingCartIcon(item) {
 // Load single product page
 function setProductToLoadInSessionStorage(clickEvent) {
     let productId = parseInt(clickEvent.currentTarget.parentElement.dataset.productId);
+    sessionStorage.setItem("loadedProductPage", productId);
+}
+
+// Load single product page from shopping cart icon
+function setProductToLoadInSessionStorageFromIcon(clickEvent) {
+    let productId = parseInt(clickEvent.currentTarget.parentElement.parentElement.dataset.productId);
     sessionStorage.setItem("loadedProductPage", productId);
 }
 
