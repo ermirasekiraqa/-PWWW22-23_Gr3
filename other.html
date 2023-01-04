@@ -36,7 +36,7 @@
     </header>
     <main>
         <div class="drag-drop-section">
-            <p id="info">Zhvendos logon ne drejtkendesh</p>
+            <p id="info">Move logo in rectangle</p>
             <script>
                 document.getElementById("info").style.fontSize = "28px";
                 document.getElementById("info").style.fontWeight = 600;
@@ -63,6 +63,42 @@
                 <br>
                 <div id="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
             </nav>
+        </div>
+        <div class="canvas-and-svg">
+            <div class="canvas-section">
+                <canvas id="my-canvas" width="600" height="200" style="border: 1px solid #7c7a7a;">
+                    Your browser does not support canvas element.  
+                </canvas>
+                <script>
+                    const c = document.getElementById("my-canvas");
+                    const ctx = c.getContext("2d");
+                    // Paths
+                    ctx.beginPath();
+                    ctx.strokeStyle = "#dc7957";
+                    ctx.moveTo(c.width/2 - 110, c.height/2 + 10);
+                    ctx.lineTo(c.width/2 + 160, c.height/2 + 10);
+                    ctx.closePath();
+                    ctx.stroke();
+                    ctx.fillStyle = "black";
+                    ctx.font = "24px Ubuntu";
+                    // Text
+                    ctx.fillText("Project in PWWW, 2023", c.width/2 - 100, c.height/2);
+                    // Gradient
+                    const grd = ctx.createLinearGradient(150, 150, 300, 0);
+                    grd.addColorStop(0, "red");
+                    grd.addColorStop(1, "white");
+                    // Fill with gradient
+                    ctx.fillStyle = grd;
+                    ctx.fillRect(c.width/2 - 110, c.height/2 + 15, c.width/2 - 30, c.height/2 - 50);
+                </script>
+            </div>
+            <div class="svg-section">
+                <svg id="rounded-rectangle-and-circle" width="600" height="400">
+                    <rect x="225" y="25" rx="20" ry="20" width="150" height="150"
+                    style = "fill:red; stroke:black; stroke-width:5; opacity:0.5" />
+                    <circle cx="300" cy="300" r="40" stroke="black" stroke-width="4" fill="red" opacity="0.5"/>
+                </svg>
+            </div>
         </div>
     </main>
 </body>
