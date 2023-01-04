@@ -66,7 +66,7 @@ body {
 #Achivements{
   padding: var(--padding);
   display: block;
-  background-image: linear-gradient(#eeeeee,#7c7a7a);
+  background-color: var(--background-grey);
 }
 
 #Achivements .container{
@@ -212,6 +212,60 @@ body {
     z-index: 1;
     transition: 0s; 
   }
+  /* ----------------------------------------------------- */
+  #best-drones{
+   margin-bottom: 0;
+    padding: var(--padding);  
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  #best-drones p{
+    margin-bottom: 70px;
+  }
+
+  #best-drones .box{
+    top: 100px;
+    left: 380px;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation:  animate 20s linear infinite;
+  }
+  @keyframes animate
+  {
+    0%
+    {
+      transform: perspective(3000px) rotateY(0deg);
+    }
+    100%
+    {
+      transform: perspective(3000px) rotateY(360deg);
+    }
+  }
+  #best-drones .box span{
+    position: absolute;
+    top: 0;
+    left: 0x;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+  }
+  #best-drones img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
 
 /* ---------------------------------------------------- */
 @keyframes example {
