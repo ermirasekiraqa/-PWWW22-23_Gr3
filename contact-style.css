@@ -84,7 +84,7 @@ body {
     width: 400px;
 
   }
-  @keyframes example {
+  @keyframes animate {
     from {background-color: var(--background-grey);}
     to {background-color: white;}
   }
@@ -94,7 +94,7 @@ body {
     justify-content: space-between;
     padding: var(--padding);
     background-color: var(--background-grey);
-    animation-name: example;
+    animation-name: animate;
     animation-duration: 5s;
   }
   
