@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"
+    />
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="other-style.css">
+    <link rel="stylesheet" href="common.css">
+    <script defer src="header-functions.js"></script>
+    <title>Modern Drone Technology</title>
+</head>
+<body>
+    <header>
+        <nav id="header-menu">
+          <h1><b>Drone</b></h1>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html"> Explore</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about-us.html">About us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li id="active">Other</li>
+            <li><a href="shopping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="drag-drop-section">
+            <p id="info">Zhvendos logon ne drejtkendesh</p>
+            <script>
+                document.getElementById("info").style.fontSize = "28px";
+                document.getElementById("info").style.fontWeight = 600;
+            </script>
+            <nav id="drag-and-drop">
+                <script>
+                    function allowDrop(ev) {
+                        ev.preventDefault();
+                    }
+            
+                    function drag(ev) {
+                        ev.dataTransfer.setData("Text", ev.target.id);
+                    }
+            
+                    function drop(ev) {
+                        ev.preventDefault();
+                        var data=event.dataTransfer.getData("Text");
+                        ev.target.appendChild(document.getElementById(data));
+                    }
+                </script>
+                <div id="img-container" ondrop="drop(event)" ondragover="allowDropEvent">
+                    <img id="drag-img" src="images\drone2.png" alt="logo" draggable="true" ondragstart="drag(event)">
+                </div>
+                <br>
+                <div id="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </nav>
+        </div>
+    </main>
+</body>
+</html>
