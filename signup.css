@@ -64,3 +64,15 @@ main img {
   font-size: 14px;
   color: #dc7957;
 }
+
+#radio-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  place-content: start;
+  gap: 10px;
+}
+.radio-label span {
+  font-size: 12xp;
+  color: #dc7957;
+  text-align: center;
+}
