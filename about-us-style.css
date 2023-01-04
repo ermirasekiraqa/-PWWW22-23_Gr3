@@ -29,6 +29,7 @@ body {
 
 .entry h2 {
     margin: 0px;
+    
 }
 
 
@@ -41,8 +42,8 @@ body {
   #about-head img{
     width: 50%;
     height: auto;
+    
   }
-
   #about-head div{
     padding-left: 40px;
  }
@@ -65,7 +66,7 @@ body {
 #Achivements{
   padding: var(--padding);
   display: block;
-  background-color: var(--background-grey);
+  background-image: linear-gradient(#eeeeee,#7c7a7a);
 }
 
 #Achivements .container{
@@ -84,7 +85,7 @@ body {
   background-color: #fff;
   transition: 0.7s ease-in-out;
   cursor: pointer;
-  box-shadow: 10px 10px 15px rgba(0,0,0,0.025);
+
 }
 
 #Achivements .container .boxes:nth-child(1)
@@ -175,7 +176,6 @@ body {
   position: relative;
   width: 350px;
   padding: 40px;
-  box-shadow: 0 5px 15px rgba(0,0,0,.1);
   border-radius: 4px;
   margin: 20px;
   box-sizing: border-box;
@@ -210,22 +210,20 @@ body {
   #history .container .box .content{
     position: relative;
     z-index: 1;
-    transition: 0.5s; 
+    transition: 0s; 
   }
 
-
-  
-  
-  
-
-
-
- 
-
-
-
-
 /* ---------------------------------------------------- */
+@keyframes example {
+  from {background-color: var(--background-grey);}
+  to {background-color: white;}
+}
+ #App{
+  padding: var(--padding);
+  background-color: var(--background-grey);
+  animation-name: example;
+  animation-duration: 5s;
+ }
  #app-link {
   text-decoration: none;
   color: var(--light-red);
@@ -253,6 +251,4 @@ body {
   background-color:black
   
  }
- #App{
-  padding: var(--padding);
- }
+ 
