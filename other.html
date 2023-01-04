@@ -16,6 +16,25 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="other-style.css">
     <link rel="stylesheet" href="common.css">
+    <style>
+        /* Canvas and svg styling */
+        .canvas-and-svg {
+            padding: var(--padding);
+            background-color: var(--background-grey);
+            text-align: center;
+        }
+
+        #my-canvas {
+            border-radius: 20px;
+            background-color: white;
+        }
+
+        #rounded-rectangle-and-circle {
+            border: 1px rgb(139, 136, 136) solid;
+            border-radius: 20px;
+            background-color: white;
+        }
+    </style>
     <script defer src="header-functions.js"></script>
     <title>Modern Drone Technology</title>
 </head>
@@ -65,6 +84,12 @@
             </nav>
         </div>
         <div class="canvas-and-svg">
+            <p id="canvas-svg-info">Canvas and <abbr id="svg" title="scalable-vector-graphics">SVG</abbr></p>
+            <script>
+                document.getElementById("canvas-svg-info").style.fontSize = "28px";
+                document.getElementById("canvas-svg-info").style.fontWeight = 600;
+                document.getElementById("svg").style.textDecoration = "none";
+            </script>
             <div class="canvas-section">
                 <canvas id="my-canvas" width="600" height="200" style="border: 1px solid #7c7a7a;">
                     Your browser does not support canvas element.  
@@ -101,5 +126,56 @@
             </div>
         </div>
     </main>
+    <footer>
+        <section class="related-info">
+          <div id="product-categories">
+            <p><span>Product Categories</span></p>
+            <p>Consumer</p>
+            <p>Professional</p>
+            <p>Enterprise</p>
+            <p>Components</p>
+          </div>
+          <div id="where-to-buy">
+            <p><span>Where to Buy</span></p>
+            <p>Consumer</p>
+            <p>Professional</p>
+            <p>Enterprise</p>
+            <p>Components</p>
+          </div>
+          <div id="quick-links">
+            <p><span>Quick Links</span></p>
+            <p>Who we are</p>
+            <p>Contact Us</p>
+            <p>Careers</p>
+            <p>Dealer portal</p>
+          </div>
+          <div id="service-plan">
+            <p><span>Service Plan</span></p>
+            <p>Consumer</p>
+            <p>Professional</p>
+            <p>Enterprise</p>
+            <p>Components</p>
+          </div>
+          <div id="cooperation">
+            <p><span>Cooperation</span></p>
+            <p>Consumer</p>
+            <p>Professional</p>
+            <p>Enterprise</p>
+            <p>Components</p>
+          </div>
+        </section>
+  
+        <section class="copyright-social-media">
+          <p>
+            Copyright © 2022 Templates Jungle Rights Reserved. Feedback on web
+            experience
+          </p>
+          <div id="social-media-icons">
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-google-plus"></i>
+            <i class="fa fa-linkedin"></i>
+          </div>
+        </section>
+      </footer>
 </body>
 </html>
