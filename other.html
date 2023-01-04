@@ -36,7 +36,11 @@
     </header>
     <main>
         <div class="drag-drop-section">
-            <p>Zhvendos logon ne drejtkendesh</p>
+            <p id="info">Zhvendos logon ne drejtkendesh</p>
+            <script>
+                document.getElementById("info").style.fontSize = "28px";
+                document.getElementById("info").style.fontWeight = 600;
+            </script>
             <nav id="drag-and-drop">
                 <script>
                     function allowDrop(ev) {
