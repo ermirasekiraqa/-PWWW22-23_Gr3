@@ -1,0 +1,42 @@
+:root {
+    /* CSS variables */
+    --padding: 60px 200px 60px 200px;
+    --background-grey: #eeeeee;
+    --light-grey: #7c7a7a;
+    --light-red: #dc7957;
+    --font-size: 14px;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Drag and drop section styling */
+.drag-drop-section {
+    padding: var(--padding);
+    text-align: center;
+}
+
+#drag-and-drop {
+    display: flex;
+    justify-content: space-between;
+}
+
+#img-container {
+    border: 2px dashed var(--light-grey);
+    border-radius: 20px;
+    width: 350px;
+    padding: 20px;
+}
+
+#drop-box {
+    border: 2px dashed var(--light-grey);
+    border-radius: 20px;
+    width: 350px;
+    padding: 20px;
+}
+
+#drag-img {
+    width: 80%;
+}

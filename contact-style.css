@@ -24,6 +24,7 @@ body {
     text-align: center;
     flex-direction: column;
     color: white;
+    background-origin: padding-box;
 }
 
 .entry h2 {
@@ -54,6 +55,7 @@ body {
     font-size: 26px;
     line-height: 35px;
     padding: 20px 0;
+    text-shadow: 2px 2px var(--light-grey);
   }
 
   #contact-details .details h3{
@@ -82,12 +84,18 @@ body {
     width: 400px;
 
   }
+  @keyframes example {
+    from {background-color: var(--background-grey);}
+    to {background-color: white;}
+  }
 
   #form-details{
     display: flex;
     justify-content: space-between;
     padding: var(--padding);
     background-color: var(--background-grey);
+    animation-name: example;
+    animation-duration: 5s;
   }
   
   #form-details form{

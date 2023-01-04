@@ -11,6 +11,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-color-scheme: dark) {
+  .About-Us {
+    background-color: red;
+  }
+}
+
 body {
   font-family: "Ubuntu", sans-serif;
   overflow-x: hidden;
