@@ -2,7 +2,7 @@
 function outputProduct(item) {
     let productDiv = document.createElement("div");
     productDiv.className = "product";
-    productDiv.dataset.productId = item.product.id;  
+    productDiv.dataset.productId = item.product.id;
     productDiv.appendChild(createProductImg(item));
     productDiv.appendChild(createProductDescription(item));
     return productDiv;
@@ -44,7 +44,7 @@ function createProductName(item) {
 function createProductRatings(item) {
     let productRatings = document.createElement("div");
     productRatings.className = "ratings";
-    for(let i = 0; i < item.product.rates; i++) {
+    for (let i = 0; i < item.product.rates; i++) {
         let star = document.createElement("i");
         star.className = "fa fa-star";
         productRatings.appendChild(star);
@@ -55,7 +55,7 @@ function createProductRatings(item) {
 function createProductPrice(item) {
     let productPrice = document.createElement("h4");
     productPrice.innerText = "$" + item.product.price;
-    return  productPrice;
+    return productPrice;
 }
 
 function createShoppingCartIcon(item) {
@@ -85,7 +85,7 @@ let productSection = document.getElementById("product-container");
 // Pagination
 let rows = 3;
 let currentPage = 1;  // Current page
-let pageSize = Math.ceil(products.length/(rows*3));
+let pageSize = Math.ceil(products.length / (rows * 3));
 
 function displayProducts(products) {
     productSection.innerHTML = "";
@@ -105,7 +105,7 @@ function displayPaginationButtons(num) {
         paginationSection.appendChild(prevButton);
     }
 
-    for(let i = 0; i < num; i++) {
+    for (let i = 0; i < num; i++) {
         let numButton = document.createElement("button");
         numButton.onclick = loadPage;
         numButton.innerText = i + 1;
@@ -123,15 +123,15 @@ function displayPaginationButtons(num) {
 }
 
 function nextPage() {
-    if(currentPage === pageSize)
-        return; 
+    if (currentPage === pageSize)
+        return;
     currentPage += 1;
     displayProducts(products);
 }
 
 function prevPage() {
-    if(currentPage === 1)
-        return; 
+    if (currentPage === 1)
+        return;
     currentPage -= 1;
     displayProducts(products);
 }

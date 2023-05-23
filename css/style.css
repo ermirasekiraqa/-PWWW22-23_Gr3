@@ -34,6 +34,7 @@ a {
   margin: 0 16px 40px 16px;
   position: relative;
 }
+
 .entry mark {
   padding: 10px;
   background-color: #f9fa9b;
@@ -41,6 +42,7 @@ a {
   top: 0;
   width: 83%;
 }
+
 .entry mark a span {
   text-decoration: underline;
 }

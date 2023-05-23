@@ -64,7 +64,7 @@ setProductDetails();
 let smallImg = document.getElementsByClassName("small");
 
 for (let i = 0; i < smallImg.length; i++) {
-    smallImg[i].onclick = function() {
+    smallImg[i].onclick = function () {
         const temp = mainImg.src;
         mainImg.src = smallImg[i].src;
         smallImg[i].src = temp;
@@ -92,16 +92,16 @@ function addToCart() {
         prodQuantity: quantity,
         drone: currentProduct
     };
-  
+
     parsedUser.bag.push(productToBeAddedToCart);
 
     localStorage.setItem("user", JSON.stringify(parsedUser));
-    
+
     // Disable button after adding an item to cart
     addToCartButton.innerText = "Added to cart";
     addToCartButton.onclick = doNothing;
 }
 
 function doNothing() {
-    
+
 }

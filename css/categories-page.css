@@ -11,6 +11,7 @@ body {
   font-family: "Ubuntu", sans-serif;
   overflow-x: hidden;
 }
+
 img {
   width: 100%;
 }
@@ -47,9 +48,11 @@ main h1 {
   margin: 20px;
   transition: 0.4s ease-in-out;
 }
+
 .product:hover button {
   background-color: #ff1e1e;
 }
+
 .product-info {
   padding: 5px 8px;
   display: grid;

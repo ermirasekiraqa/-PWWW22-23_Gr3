@@ -1,40 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" manifest="manifest.appcache">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link 
-        rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    >
-    <link 
-        rel="stylesheet" 
-        type="text/css" 
-        href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"
-    >
-    <link rel="stylesheet" href="shop-style.css">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="common.css">
-    <script src="shop-data.js"></script>
-    <script src="single-product-functions.js" defer="true"></script>
-    <script defer src="header-functions.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <link rel="stylesheet" href="css\shop-style.css">
+    <link rel="stylesheet" href="css\normalize.css">
+    <link rel="stylesheet" href="css\common.css">
+
+    <script src="js\shop-data.js"></script>
+    <script defer src="js\single-product-functions.js"></script>
+    <script defer src="js\header-functions.js"></script>
+
     <title>Shop</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+
+    <link rel="icon" type="image/x-icon" href="images\favicon.png">
 </head>
+
 <body>
     <header>
         <nav id="header-menu">
-          <h1><b>Drone</b></h1>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="explore.html"> Explore</a></li>
-            <li id="active">Shop</li>
-            <li><a href="about-us.html">About us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="other.html">Other</a></li>
-            <li><a href="shopping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>
-          </ul>
+            <h1><b>Drone</b></h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html"> Explore</a></li>
+                <li id="active">Shop</li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="shopping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -45,14 +43,14 @@
                 </div>
                 <div id="smaller-images">
                     <div id="small-img">
-                        <img class="small" src="shop_images\black-drone.png" alt="">
+                        <img class="small" src="images\black-drone.png" alt="">
                     </div>
                     <div id="small-img">
-                        <img class="small" src="shop_images\blue-drone.png" alt="">
+                        <img class="small" src="images\blue-drone.png" alt="">
                     </div>
                     <div id="small-img">
-                        <img class="small" src="shop_images\red-drone.png" alt="">
-                    </div>    
+                        <img class="small" src="images\red-drone.png" alt="">
+                    </div>
                 </div>
             </div>
             <div class="prod-description">
@@ -159,4 +157,5 @@
         </section>
     </footer>
 </body>
+
 </html>

@@ -1,9 +1,8 @@
-body {
-}
 img {
   width: 100%;
   height: 100%;
 }
+
 main {
   display: grid;
   grid-template-columns: 800px auto;
@@ -71,6 +70,7 @@ main img {
   place-content: start;
   gap: 10px;
 }
+
 .radio-label span {
   font-size: 12xp;
   color: #dc7957;

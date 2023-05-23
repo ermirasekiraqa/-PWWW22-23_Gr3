@@ -14,7 +14,7 @@ body {
 
 /* Entry styling */
 .entry {
-    background-image: url("shop_images/entry-background.png");
+    background-image: url("/images/entry-background.png");
     width: 100%;
     height: 40vh;
     background-size: cover;
